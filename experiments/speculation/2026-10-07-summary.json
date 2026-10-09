@@ -1,0 +1,1628 @@
+{
+  "date": "2026-10-07",
+  "description": "Exploratory runs; do not pool cohorts. pilot has an invalid grader; replay is not live inference.",
+  "cohorts": [
+    {
+      "name": "pilot",
+      "protocol": {
+        "settings": {
+          "provider": "openrouter",
+          "model": "openai/gpt-oss-120b",
+          "routing": "cerebras",
+          "latencyMs": 0,
+          "speculative": false,
+          "maxTurns": 16,
+          "timeoutMs": 120000
+        },
+        "tasks": [
+          "wordy"
+        ],
+        "repeats": 1,
+        "latencies": [
+          0
+        ],
+        "datasetRevision": "7e0611e77b54e2dea774cdc0aa00cf9f7ed6144f",
+        "piRevision": "1cedd32724abfcb0915f76cc61b6827e2c16dbad",
+        "startedAt": "2026-10-07T23:49:30.324Z",
+        "design": "Paired, order-alternating, sequential runs; fresh task workspace and original tests; latency is injected only after real test execution in both arms; final grading outside timed region. Public tests, not held out. No provider fallback."
+      },
+      "rows": [
+        {
+          "task": "wordy",
+          "repetition": 0,
+          "speculative": false,
+          "latencyMs": 0,
+          "wallMs": 7471.124209,
+          "passed": false,
+          "testsRun": 0,
+          "turns": 14,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 3.2136669999999867
+            },
+            {
+              "name": "read",
+              "ms": 0.2804169999999431
+            },
+            {
+              "name": "read",
+              "ms": 0.29162499999983993
+            },
+            {
+              "name": "write",
+              "ms": 9.018332999999984
+            },
+            {
+              "name": "run_tests",
+              "ms": 26.941334000000097
+            },
+            {
+              "name": "write",
+              "ms": 0.3735830000000533
+            },
+            {
+              "name": "run_tests",
+              "ms": 15.741874999999709
+            },
+            {
+              "name": "write",
+              "ms": 0.33712500000001455
+            },
+            {
+              "name": "run_tests",
+              "ms": 14.47729199999958
+            },
+            {
+              "name": "run_tests",
+              "ms": 17.779500000000553
+            },
+            {
+              "name": "run_tests",
+              "ms": 9.376374999999825
+            },
+            {
+              "name": "write",
+              "ms": 0.19437500000003638
+            },
+            {
+              "name": "run_tests",
+              "ms": 13.27416699999958
+            }
+          ],
+          "requestCount": 14,
+          "speculations": []
+        },
+        {
+          "task": "wordy",
+          "repetition": 0,
+          "speculative": true,
+          "latencyMs": 0,
+          "wallMs": 10491.322083,
+          "passed": false,
+          "testsRun": 0,
+          "turns": 14,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.6508329999996931
+            },
+            {
+              "name": "read",
+              "ms": 0.18941600000016479
+            },
+            {
+              "name": "read",
+              "ms": 0.2720419999986916
+            },
+            {
+              "name": "write",
+              "ms": 2.343417000000045
+            },
+            {
+              "name": "run_tests",
+              "ms": 15.623999999999796
+            },
+            {
+              "name": "write",
+              "ms": 0.28520799999932933
+            },
+            {
+              "name": "run_tests",
+              "ms": 9.609375
+            },
+            {
+              "name": "write",
+              "ms": 0.21674999999959255
+            },
+            {
+              "name": "run_tests",
+              "ms": 9.148084000000381
+            },
+            {
+              "name": "run_tests",
+              "ms": 9.181375000000116
+            },
+            {
+              "name": "run_tests",
+              "ms": 9.010916999999608
+            },
+            {
+              "name": "write",
+              "ms": 0.2941660000014963
+            },
+            {
+              "name": "run_tests",
+              "ms": 10.01512499999808
+            }
+          ],
+          "requestCount": 20,
+          "speculations": [
+            {
+              "toolCallId": "12bd0dbe8",
+              "status": "mismatch",
+              "headStartMs": 13.339083999999275,
+              "generationMs": null
+            },
+            {
+              "toolCallId": "226e79896",
+              "status": "mismatch",
+              "headStartMs": 9.500833000000057,
+              "generationMs": null
+            },
+            {
+              "toolCallId": "f5fbb6e32",
+              "status": "mismatch",
+              "headStartMs": 9.043958999998722,
+              "generationMs": null
+            },
+            {
+              "toolCallId": "547571172",
+              "status": "mismatch",
+              "headStartMs": 9.069041000000652,
+              "generationMs": null
+            },
+            {
+              "toolCallId": "1ceb27a84",
+              "status": "mismatch",
+              "headStartMs": 8.911082999999053,
+              "generationMs": null
+            },
+            {
+              "toolCallId": "5450e933d",
+              "status": "mismatch",
+              "headStartMs": 9.762041999998473,
+              "generationMs": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pilot-validated",
+      "protocol": {
+        "settings": {
+          "provider": "openrouter",
+          "model": "openai/gpt-oss-120b",
+          "routing": "cerebras",
+          "latencyMs": 0,
+          "speculative": false,
+          "maxTurns": 16,
+          "timeoutMs": 120000
+        },
+        "tasks": [
+          "wordy"
+        ],
+        "repeats": 1,
+        "latencies": [
+          0,
+          2000
+        ],
+        "datasetRevision": "7e0611e77b54e2dea774cdc0aa00cf9f7ed6144f",
+        "piRevision": "1cedd32724abfcb0915f76cc61b6827e2c16dbad",
+        "startedAt": "2026-10-07T23:50:25.649Z",
+        "design": "Paired, order-alternating, sequential runs; fresh task workspace and original tests; latency is injected only after real test execution in both arms; final grading outside timed region. Public tests, not held out. No provider fallback."
+      },
+      "rows": [
+        {
+          "task": "wordy",
+          "repetition": 0,
+          "speculative": false,
+          "latencyMs": 0,
+          "wallMs": 5038.174917,
+          "passed": true,
+          "testsRun": 25,
+          "turns": 10,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 2.4166250000000673
+            },
+            {
+              "name": "read",
+              "ms": 0.5197079999998095
+            },
+            {
+              "name": "read",
+              "ms": 0.20229100000005928
+            },
+            {
+              "name": "write",
+              "ms": 0.879207999999835
+            },
+            {
+              "name": "run_tests",
+              "ms": 89.85970800000041
+            },
+            {
+              "name": "write",
+              "ms": 0.3142920000000231
+            },
+            {
+              "name": "run_tests",
+              "ms": 92.76233400000001
+            },
+            {
+              "name": "write",
+              "ms": 0.2319590000001881
+            },
+            {
+              "name": "run_tests",
+              "ms": 71.79100000000017
+            }
+          ],
+          "requestCount": 10,
+          "speculations": []
+        },
+        {
+          "task": "wordy",
+          "repetition": 0,
+          "speculative": true,
+          "latencyMs": 0,
+          "wallMs": 6423.349375,
+          "passed": true,
+          "testsRun": 25,
+          "turns": 11,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.35479100000065955
+            },
+            {
+              "name": "read",
+              "ms": 0.13908400000036636
+            },
+            {
+              "name": "read",
+              "ms": 0.20654100000047038
+            },
+            {
+              "name": "write",
+              "ms": 0.9865419999996448
+            },
+            {
+              "name": "run_tests",
+              "ms": 71.75104100000044
+            },
+            {
+              "name": "write",
+              "ms": 0.38579199999912817
+            },
+            {
+              "name": "run_tests",
+              "ms": 63.479708000000755
+            },
+            {
+              "name": "write",
+              "ms": 0.4567090000000462
+            },
+            {
+              "name": "write",
+              "ms": 0.7128749999992579
+            },
+            {
+              "name": "run_tests",
+              "ms": 97.2973750000001
+            }
+          ],
+          "requestCount": 13,
+          "speculations": [
+            {
+              "toolCallId": "9cb3f9764",
+              "status": "mismatch",
+              "headStartMs": 71.00424999999996,
+              "generationMs": null
+            },
+            {
+              "toolCallId": "b0623e8b0",
+              "status": "mismatch",
+              "headStartMs": 63.02533300000141,
+              "generationMs": null
+            },
+            {
+              "toolCallId": "85a5f7369",
+              "status": "accepted",
+              "headStartMs": 97.24395800000093,
+              "generationMs": 285
+            }
+          ]
+        },
+        {
+          "task": "wordy",
+          "repetition": 0,
+          "speculative": false,
+          "latencyMs": 2000,
+          "wallMs": 12868.970875,
+          "passed": true,
+          "testsRun": 25,
+          "turns": 10,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 1.6196250000011787
+            },
+            {
+              "name": "read",
+              "ms": 0.14387499999975262
+            },
+            {
+              "name": "read",
+              "ms": 0.2004159999996773
+            },
+            {
+              "name": "write",
+              "ms": 0.609375
+            },
+            {
+              "name": "run_tests",
+              "ms": 2062.0464580000007
+            },
+            {
+              "name": "write",
+              "ms": 0.21354199999768753
+            },
+            {
+              "name": "run_tests",
+              "ms": 2055.5496249999997
+            },
+            {
+              "name": "write",
+              "ms": 0.4258339999978489
+            },
+            {
+              "name": "run_tests",
+              "ms": 2046.5086249999986
+            }
+          ],
+          "requestCount": 10,
+          "speculations": []
+        },
+        {
+          "task": "wordy",
+          "repetition": 0,
+          "speculative": true,
+          "latencyMs": 2000,
+          "wallMs": 6823.8347090000025,
+          "passed": false,
+          "testsRun": 25,
+          "turns": 8,
+          "error": "402: {\"message\":\"This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.\",\"code\":402,\"metadata\":{\"reason\":\"in_flight_budget_exhausted\",\"limit_source\":\"openrouter_in_flight_budget\",\"remedy_hint\":\"Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.\",\"headers\":{\"Retry-After\":\"120\"},\"provider_name\":null}}",
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.5002500000009604
+            },
+            {
+              "name": "read",
+              "ms": 0.1630829999994603
+            },
+            {
+              "name": "read",
+              "ms": 0.1358330000002752
+            },
+            {
+              "name": "write",
+              "ms": 0.42016700000021956
+            },
+            {
+              "name": "run_tests",
+              "ms": 2050.0132919999996
+            },
+            {
+              "name": "write",
+              "ms": 0.2927909999998519
+            },
+            {
+              "name": "run_tests",
+              "ms": 2054.500833000002
+            }
+          ],
+          "requestCount": 10,
+          "speculations": [
+            {
+              "toolCallId": "53d498a1e",
+              "status": "mismatch",
+              "headStartMs": 2049.7961670000004,
+              "generationMs": 264
+            },
+            {
+              "toolCallId": "568c4a37a",
+              "status": "mismatch",
+              "headStartMs": 2054.383665999998,
+              "generationMs": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "live-comparison",
+      "protocol": {
+        "settings": {
+          "provider": "openrouter",
+          "model": "openai/gpt-oss-120b",
+          "routing": "cerebras",
+          "latencyMs": 0,
+          "speculative": false,
+          "maxTurns": 16,
+          "timeoutMs": 120000
+        },
+        "sourceHashes": {
+          "packages/agent/src/speculation.ts": "78b5687ed969c375d94cf17b8b90b3543960f71c4f9613da42fc5648f3096aa0",
+          "packages/agent/examples/speculative/runner.ts": "e43e60dcdf29335fe0a4909528f75db9f7f0d0525406c4e9c91b8c6a9073419e",
+          "packages/agent/examples/speculative/cli.ts": "4513e135536c4c0581035d952922220b9f1d7bb62ae4140de9867f6b954966fa"
+        },
+        "taskHashes": {
+          "grade-school": "6da35a17199c8d995dfe39c874fb296513fdda6b7783a9ab589f0d5e51f4d6ee",
+          "phone-number": "6ba8d39584450eaa3df16275329efb63f5e41cd6a1f490da4e0675f6f745262b"
+        },
+        "tasks": [
+          "grade-school",
+          "phone-number"
+        ],
+        "repeats": 1,
+        "latencies": [
+          0
+        ],
+        "datasetRevision": "7e0611e77b54e2dea774cdc0aa00cf9f7ed6144f",
+        "piRevision": "1cedd32724abfcb0915f76cc61b6827e2c16dbad",
+        "startedAt": "2026-10-07T23:53:16.108Z",
+        "design": "Paired, order-alternating, sequential runs; fresh task workspace and original tests; latency is injected only after real test execution in both arms; final grading outside timed region. Public tests, not held out. No provider fallback."
+      },
+      "rows": [
+        {
+          "task": "grade-school",
+          "repetition": 0,
+          "speculative": false,
+          "latencyMs": 0,
+          "wallMs": 2428.3827499999998,
+          "passed": true,
+          "testsRun": 20,
+          "turns": 6,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 3.1522500000000946
+            },
+            {
+              "name": "read",
+              "ms": 0.7567090000000007
+            },
+            {
+              "name": "read",
+              "ms": 0.4429160000001957
+            },
+            {
+              "name": "write",
+              "ms": 0.7764160000001539
+            },
+            {
+              "name": "run_tests",
+              "ms": 93.56541700000025
+            }
+          ],
+          "requestCount": 6,
+          "speculations": []
+        },
+        {
+          "task": "grade-school",
+          "repetition": 0,
+          "speculative": true,
+          "latencyMs": 0,
+          "wallMs": 1780.6325410000004,
+          "passed": true,
+          "testsRun": 20,
+          "turns": 6,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.6108749999998508
+            },
+            {
+              "name": "read",
+              "ms": 0.3609999999998763
+            },
+            {
+              "name": "read",
+              "ms": 0.37512500000002547
+            },
+            {
+              "name": "write",
+              "ms": 0.7845829999996567
+            },
+            {
+              "name": "run_tests",
+              "ms": 94.40554099999918
+            }
+          ],
+          "requestCount": 6,
+          "speculations": [
+            {
+              "toolCallId": "1d8956805",
+              "status": "accepted",
+              "headStartMs": 83.6786660000007,
+              "generationMs": 309
+            }
+          ]
+        },
+        {
+          "task": "phone-number",
+          "repetition": 0,
+          "speculative": true,
+          "latencyMs": 0,
+          "wallMs": 1844.9031670000004,
+          "passed": true,
+          "testsRun": 21,
+          "turns": 6,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.5248750000000655
+            },
+            {
+              "name": "read",
+              "ms": 0.5319999999992433
+            },
+            {
+              "name": "read",
+              "ms": 0.5672500000000582
+            },
+            {
+              "name": "write",
+              "ms": 0.49179199999980483
+            },
+            {
+              "name": "run_tests",
+              "ms": 76.35370800000055
+            }
+          ],
+          "requestCount": 6,
+          "speculations": [
+            {
+              "toolCallId": "adb88ad4a",
+              "status": "accepted",
+              "headStartMs": 75.86041699999987,
+              "generationMs": 277
+            }
+          ]
+        },
+        {
+          "task": "phone-number",
+          "repetition": 0,
+          "speculative": false,
+          "latencyMs": 0,
+          "wallMs": 2356.1078750000006,
+          "passed": true,
+          "testsRun": 21,
+          "turns": 6,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.3811249999998836
+            },
+            {
+              "name": "read",
+              "ms": 0.20495800000026065
+            },
+            {
+              "name": "read",
+              "ms": 0.2520840000006501
+            },
+            {
+              "name": "write",
+              "ms": 0.6458329999986745
+            },
+            {
+              "name": "run_tests",
+              "ms": 96.44066699999894
+            }
+          ],
+          "requestCount": 6,
+          "speculations": []
+        }
+      ]
+    },
+    {
+      "name": "main-comparison",
+      "protocol": {
+        "settings": {
+          "provider": "openrouter",
+          "model": "openai/gpt-oss-120b",
+          "routing": "cerebras",
+          "latencyMs": 0,
+          "speculative": false,
+          "maxTurns": 16,
+          "timeoutMs": 120000
+        },
+        "sourceHashes": {
+          "packages/agent/src/speculation.ts": "78b5687ed969c375d94cf17b8b90b3543960f71c4f9613da42fc5648f3096aa0",
+          "packages/agent/examples/speculative/runner.ts": "e43e60dcdf29335fe0a4909528f75db9f7f0d0525406c4e9c91b8c6a9073419e",
+          "packages/agent/examples/speculative/cli.ts": "4513e135536c4c0581035d952922220b9f1d7bb62ae4140de9867f6b954966fa"
+        },
+        "taskHashes": {
+          "wordy": "9d94efbc7be9e016efc15ecb9b18ed3bdd76a892651149e6d36cf3118e569f40",
+          "grade-school": "6da35a17199c8d995dfe39c874fb296513fdda6b7783a9ab589f0d5e51f4d6ee",
+          "phone-number": "6ba8d39584450eaa3df16275329efb63f5e41cd6a1f490da4e0675f6f745262b",
+          "transpose": "68f4c116ba58dee912091e783572ec714c1a6845228895f445487a8f1611505c",
+          "forth": "074f1047633c248a88990569ee52cde91ace66a2a2928621e2609f7effbe58df",
+          "bowling": "fdff65867c389bc89eec761b5910fd0778ed3efe3fae3cc9d4b8170025ad1ac9"
+        },
+        "tasks": [
+          "wordy",
+          "grade-school",
+          "phone-number",
+          "transpose",
+          "forth",
+          "bowling"
+        ],
+        "repeats": 2,
+        "latencies": [
+          0,
+          2000
+        ],
+        "datasetRevision": "7e0611e77b54e2dea774cdc0aa00cf9f7ed6144f",
+        "piRevision": "1cedd32724abfcb0915f76cc61b6827e2c16dbad",
+        "startedAt": "2026-10-07T23:53:40.684Z",
+        "design": "Paired, order-alternating, sequential runs; fresh task workspace and original tests; latency is injected only after real test execution in both arms; final grading outside timed region. Public tests, not held out. No provider fallback."
+      },
+      "rows": [
+        {
+          "task": "wordy",
+          "repetition": 0,
+          "speculative": false,
+          "latencyMs": 0,
+          "wallMs": 5047.1155,
+          "passed": false,
+          "testsRun": 25,
+          "turns": 10,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 1.9288750000000618
+            },
+            {
+              "name": "read",
+              "ms": 0.21787499999993543
+            },
+            {
+              "name": "read",
+              "ms": 0.24125000000003638
+            },
+            {
+              "name": "write",
+              "ms": 0.6417500000000018
+            },
+            {
+              "name": "run_tests",
+              "ms": 54.71391700000004
+            },
+            {
+              "name": "write",
+              "ms": 0.42866700000013225
+            },
+            {
+              "name": "run_tests",
+              "ms": 56.11262500000021
+            },
+            {
+              "name": "write",
+              "ms": 0.36316700000043056
+            },
+            {
+              "name": "run_tests",
+              "ms": 53.32012500000019
+            }
+          ],
+          "requestCount": 10,
+          "speculations": []
+        },
+        {
+          "task": "wordy",
+          "repetition": 0,
+          "speculative": true,
+          "latencyMs": 0,
+          "wallMs": 3604.172917,
+          "passed": false,
+          "testsRun": 25,
+          "turns": 10,
+          "error": "402: {\"message\":\"This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.\",\"code\":402,\"metadata\":{\"reason\":\"in_flight_budget_exhausted\",\"limit_source\":\"openrouter_in_flight_budget\",\"remedy_hint\":\"Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.\",\"headers\":{\"Retry-After\":\"120\"},\"provider_name\":null}}",
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.4535829999995258
+            },
+            {
+              "name": "read",
+              "ms": 0.23116699999991397
+            },
+            {
+              "name": "read",
+              "ms": 0.306999999999789
+            },
+            {
+              "name": "write",
+              "ms": 0.5132499999999709
+            },
+            {
+              "name": "run_tests",
+              "ms": 56.07541599999968
+            },
+            {
+              "name": "write",
+              "ms": 0.2997079999995549
+            },
+            {
+              "name": "run_tests",
+              "ms": 76.4574590000002
+            },
+            {
+              "name": "write",
+              "ms": 0.5349999999998545
+            },
+            {
+              "name": "run_tests",
+              "ms": 49.405917000000045
+            }
+          ],
+          "requestCount": 13,
+          "speculations": [
+            {
+              "toolCallId": "e1d04a8e5",
+              "status": "mismatch",
+              "headStartMs": 49.73887500000001,
+              "generationMs": null
+            },
+            {
+              "toolCallId": "ea450ba33",
+              "status": "mismatch",
+              "headStartMs": 75.26704199999949,
+              "generationMs": null
+            },
+            {
+              "toolCallId": "2b6d4d47e",
+              "status": "mismatch",
+              "headStartMs": 49.194250000000466,
+              "generationMs": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "drain-comparison",
+      "protocol": {
+        "settings": {
+          "provider": "openrouter",
+          "model": "openai/gpt-oss-120b",
+          "routing": "cerebras",
+          "latencyMs": 0,
+          "speculative": false,
+          "mismatchPolicy": "drain",
+          "maxTurns": 16,
+          "timeoutMs": 120000
+        },
+        "sourceHashes": {
+          "packages/agent/src/speculation.ts": "c52dfae426e1d332c6d1b81deb2981f16fd3c6893bbec37dad5dd3e898cc283d",
+          "packages/agent/examples/speculative/runner.ts": "42deec699e5ee826afa0147facd79cd2094ad6dd3d881c311b2c4f8c42641ef2",
+          "packages/agent/examples/speculative/cli.ts": "79bd2c74bbaece0eaaf4e27ccbc1d1fdb34867e72cbb5cef36080b11c94b8c3d"
+        },
+        "taskHashes": {
+          "wordy": "9d94efbc7be9e016efc15ecb9b18ed3bdd76a892651149e6d36cf3118e569f40",
+          "grade-school": "6da35a17199c8d995dfe39c874fb296513fdda6b7783a9ab589f0d5e51f4d6ee",
+          "phone-number": "6ba8d39584450eaa3df16275329efb63f5e41cd6a1f490da4e0675f6f745262b",
+          "transpose": "68f4c116ba58dee912091e783572ec714c1a6845228895f445487a8f1611505c",
+          "forth": "074f1047633c248a88990569ee52cde91ace66a2a2928621e2609f7effbe58df",
+          "bowling": "fdff65867c389bc89eec761b5910fd0778ed3efe3fae3cc9d4b8170025ad1ac9"
+        },
+        "tasks": [
+          "wordy",
+          "grade-school",
+          "phone-number",
+          "transpose",
+          "forth",
+          "bowling"
+        ],
+        "repeats": 2,
+        "latencies": [
+          0,
+          2000
+        ],
+        "datasetRevision": "7e0611e77b54e2dea774cdc0aa00cf9f7ed6144f",
+        "piRevision": "1cedd32724abfcb0915f76cc61b6827e2c16dbad",
+        "startedAt": "2026-10-07T23:55:21.682Z",
+        "design": "Paired, order-alternating, sequential runs; fresh task workspace and original tests; latency is injected only after real test execution in both arms; final grading outside timed region. Public tests, not held out. No provider fallback."
+      },
+      "rows": [
+        {
+          "task": "wordy",
+          "repetition": 0,
+          "speculative": false,
+          "latencyMs": 0,
+          "wallMs": 224.38620799999995,
+          "passed": false,
+          "testsRun": 25,
+          "turns": 1,
+          "error": "402: {\"message\":\"This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.\",\"code\":402,\"metadata\":{\"reason\":\"in_flight_budget_exhausted\",\"limit_source\":\"openrouter_in_flight_budget\",\"remedy_hint\":\"Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.\",\"headers\":{\"Retry-After\":\"120\"},\"provider_name\":null}}",
+          "tools": [],
+          "requestCount": 1,
+          "speculations": []
+        }
+      ]
+    },
+    {
+      "name": "replay-validation",
+      "protocol": {
+        "kind": "recorded-trajectory replay",
+        "trace": "pilot-validated/0ms-r1-wordy-baseline/transcript.json",
+        "values": {
+          "trace": "pilot-validated/0ms-r1-wordy-baseline/transcript.json",
+          "repeats": "3",
+          "latencies": "0,2000",
+          "output": ".artifacts/speculation/replay-validation",
+          "dataset": "../pi-benchmark-tasks",
+          "task": "wordy"
+        },
+        "counterfactualLatencyMs": 513,
+        "limitations": "Reuses recorded assistant decisions and timing, executes real tests. Unknown counterfactual branches use a dummy discarded answer and median latency. Validates scheduling and replayed artifact correctness, NOT independent model accuracy or live service speedup."
+      },
+      "rows": [
+        {
+          "task": "wordy",
+          "repetition": 0,
+          "speculative": false,
+          "latencyMs": 0,
+          "wallMs": 4977.893083999999,
+          "passed": true,
+          "testsRun": 25,
+          "turns": 10,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 3.4680829999999787
+            },
+            {
+              "name": "read",
+              "ms": 0.31054199999994125
+            },
+            {
+              "name": "read",
+              "ms": 0.13812499999994543
+            },
+            {
+              "name": "write",
+              "ms": 0.6065830000000005
+            },
+            {
+              "name": "run_tests",
+              "ms": 74.47520799999984
+            },
+            {
+              "name": "write",
+              "ms": 0.41525000000001455
+            },
+            {
+              "name": "run_tests",
+              "ms": 48.200500000000375
+            },
+            {
+              "name": "write",
+              "ms": 0.19475000000011278
+            },
+            {
+              "name": "run_tests",
+              "ms": 47.450583000000734
+            }
+          ],
+          "requestCount": 10,
+          "speculations": []
+        },
+        {
+          "task": "wordy",
+          "repetition": 0,
+          "speculative": true,
+          "latencyMs": 0,
+          "wallMs": 4906.3915,
+          "passed": true,
+          "testsRun": 25,
+          "turns": 10,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.37958399999934045
+            },
+            {
+              "name": "read",
+              "ms": 0.15541699999994307
+            },
+            {
+              "name": "read",
+              "ms": 0.23574999999982538
+            },
+            {
+              "name": "write",
+              "ms": 0.43041700000048877
+            },
+            {
+              "name": "run_tests",
+              "ms": 51.79795800000011
+            },
+            {
+              "name": "write",
+              "ms": 1.2342089999992822
+            },
+            {
+              "name": "run_tests",
+              "ms": 58.402374999999665
+            },
+            {
+              "name": "write",
+              "ms": 0.3445830000000569
+            },
+            {
+              "name": "run_tests",
+              "ms": 66.43754100000115
+            }
+          ],
+          "requestCount": 12,
+          "speculations": [
+            {
+              "toolCallId": "d84289993",
+              "status": "mismatch",
+              "headStartMs": 51.44604100000015,
+              "generationMs": null
+            },
+            {
+              "toolCallId": "3a79d7d94",
+              "status": "mismatch",
+              "headStartMs": 58.3348330000008,
+              "generationMs": null
+            },
+            {
+              "toolCallId": "6d713b1cd",
+              "status": "accepted",
+              "headStartMs": 66.44187499999862,
+              "generationMs": 299
+            }
+          ]
+        },
+        {
+          "task": "wordy",
+          "repetition": 1,
+          "speculative": true,
+          "latencyMs": 0,
+          "wallMs": 4907.291499999999,
+          "passed": true,
+          "testsRun": 25,
+          "turns": 10,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.4779159999998228
+            },
+            {
+              "name": "read",
+              "ms": 0.275166999999783
+            },
+            {
+              "name": "read",
+              "ms": 0.1413749999992433
+            },
+            {
+              "name": "write",
+              "ms": 0.6289589999996679
+            },
+            {
+              "name": "run_tests",
+              "ms": 58.35241599999972
+            },
+            {
+              "name": "write",
+              "ms": 0.47041599999829486
+            },
+            {
+              "name": "run_tests",
+              "ms": 56.215541999999914
+            },
+            {
+              "name": "write",
+              "ms": 0.31670800000028976
+            },
+            {
+              "name": "run_tests",
+              "ms": 52.47583399999894
+            }
+          ],
+          "requestCount": 12,
+          "speculations": [
+            {
+              "toolCallId": "d84289993",
+              "status": "mismatch",
+              "headStartMs": 58.13958300000013,
+              "generationMs": null
+            },
+            {
+              "toolCallId": "3a79d7d94",
+              "status": "mismatch",
+              "headStartMs": 56.16095900000073,
+              "generationMs": null
+            },
+            {
+              "toolCallId": "6d713b1cd",
+              "status": "accepted",
+              "headStartMs": 52.40766699999949,
+              "generationMs": 299
+            }
+          ]
+        },
+        {
+          "task": "wordy",
+          "repetition": 1,
+          "speculative": false,
+          "latencyMs": 0,
+          "wallMs": 4961.450541,
+          "passed": true,
+          "testsRun": 25,
+          "turns": 10,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.33029199999873526
+            },
+            {
+              "name": "read",
+              "ms": 0.20850000000064028
+            },
+            {
+              "name": "read",
+              "ms": 0.2170829999995476
+            },
+            {
+              "name": "write",
+              "ms": 0.4653329999964626
+            },
+            {
+              "name": "run_tests",
+              "ms": 57.610665999996854
+            },
+            {
+              "name": "write",
+              "ms": 0.5293750000018917
+            },
+            {
+              "name": "run_tests",
+              "ms": 58.384125000000495
+            },
+            {
+              "name": "write",
+              "ms": 0.2668749999975262
+            },
+            {
+              "name": "run_tests",
+              "ms": 53.498999999999796
+            }
+          ],
+          "requestCount": 10,
+          "speculations": []
+        },
+        {
+          "task": "wordy",
+          "repetition": 2,
+          "speculative": false,
+          "latencyMs": 0,
+          "wallMs": 4962.760332999998,
+          "passed": true,
+          "testsRun": 25,
+          "turns": 10,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.36449999999967986
+            },
+            {
+              "name": "read",
+              "ms": 0.19691700000112178
+            },
+            {
+              "name": "read",
+              "ms": 0.14091600000028848
+            },
+            {
+              "name": "write",
+              "ms": 0.3968750000021828
+            },
+            {
+              "name": "run_tests",
+              "ms": 65.03970800000025
+            },
+            {
+              "name": "write",
+              "ms": 0.3755409999976109
+            },
+            {
+              "name": "run_tests",
+              "ms": 54.193999999999505
+            },
+            {
+              "name": "write",
+              "ms": 0.2288750000006985
+            },
+            {
+              "name": "run_tests",
+              "ms": 52.253874999998516
+            }
+          ],
+          "requestCount": 10,
+          "speculations": []
+        },
+        {
+          "task": "wordy",
+          "repetition": 2,
+          "speculative": true,
+          "latencyMs": 0,
+          "wallMs": 4913.981583000001,
+          "passed": true,
+          "testsRun": 25,
+          "turns": 10,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.33820899999773246
+            },
+            {
+              "name": "read",
+              "ms": 0.32508299999972223
+            },
+            {
+              "name": "read",
+              "ms": 0.1762909999997646
+            },
+            {
+              "name": "write",
+              "ms": 1.319459000002098
+            },
+            {
+              "name": "run_tests",
+              "ms": 64.67116700000042
+            },
+            {
+              "name": "write",
+              "ms": 1.069707999999082
+            },
+            {
+              "name": "run_tests",
+              "ms": 56.454125000000204
+            },
+            {
+              "name": "write",
+              "ms": 0.33250000000043656
+            },
+            {
+              "name": "run_tests",
+              "ms": 58.49716699999772
+            }
+          ],
+          "requestCount": 12,
+          "speculations": [
+            {
+              "toolCallId": "d84289993",
+              "status": "mismatch",
+              "headStartMs": 64.23412499999904,
+              "generationMs": null
+            },
+            {
+              "toolCallId": "3a79d7d94",
+              "status": "mismatch",
+              "headStartMs": 56.350125000000844,
+              "generationMs": null
+            },
+            {
+              "toolCallId": "6d713b1cd",
+              "status": "accepted",
+              "headStartMs": 58.40100000000166,
+              "generationMs": 299
+            }
+          ]
+        },
+        {
+          "task": "wordy",
+          "repetition": 0,
+          "speculative": false,
+          "latencyMs": 2000,
+          "wallMs": 10954.131834,
+          "passed": true,
+          "testsRun": 25,
+          "turns": 10,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.3286249999982829
+            },
+            {
+              "name": "read",
+              "ms": 0.17095900000276743
+            },
+            {
+              "name": "read",
+              "ms": 0.15429100000255858
+            },
+            {
+              "name": "write",
+              "ms": 0.45112499999959255
+            },
+            {
+              "name": "run_tests",
+              "ms": 2062.5997080000016
+            },
+            {
+              "name": "write",
+              "ms": 0.3267500000001746
+            },
+            {
+              "name": "run_tests",
+              "ms": 2050.9582500000033
+            },
+            {
+              "name": "write",
+              "ms": 0.3583749999961583
+            },
+            {
+              "name": "run_tests",
+              "ms": 2048.8854999999967
+            }
+          ],
+          "requestCount": 10,
+          "speculations": []
+        },
+        {
+          "task": "wordy",
+          "repetition": 0,
+          "speculative": true,
+          "latencyMs": 2000,
+          "wallMs": 10652.930084,
+          "passed": true,
+          "testsRun": 25,
+          "turns": 10,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.27375000000029104
+            },
+            {
+              "name": "read",
+              "ms": 0.16662499999802094
+            },
+            {
+              "name": "read",
+              "ms": 0.20466599999781465
+            },
+            {
+              "name": "write",
+              "ms": 0.4080420000027516
+            },
+            {
+              "name": "run_tests",
+              "ms": 2050.9055829999998
+            },
+            {
+              "name": "write",
+              "ms": 0.4181669999961741
+            },
+            {
+              "name": "run_tests",
+              "ms": 2058.487083
+            },
+            {
+              "name": "write",
+              "ms": 0.3672500000029686
+            },
+            {
+              "name": "run_tests",
+              "ms": 2053.8797909999994
+            }
+          ],
+          "requestCount": 12,
+          "speculations": [
+            {
+              "toolCallId": "d84289993",
+              "status": "mismatch",
+              "headStartMs": 2050.7543339999975,
+              "generationMs": 299
+            },
+            {
+              "toolCallId": "3a79d7d94",
+              "status": "mismatch",
+              "headStartMs": 2058.2344159999993,
+              "generationMs": 299
+            },
+            {
+              "toolCallId": "6d713b1cd",
+              "status": "accepted",
+              "headStartMs": 2053.8061249999955,
+              "generationMs": 299
+            }
+          ]
+        },
+        {
+          "task": "wordy",
+          "repetition": 1,
+          "speculative": true,
+          "latencyMs": 2000,
+          "wallMs": 10698.140374999995,
+          "passed": true,
+          "testsRun": 25,
+          "turns": 10,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.32104099999560276
+            },
+            {
+              "name": "read",
+              "ms": 0.19116699999722186
+            },
+            {
+              "name": "read",
+              "ms": 0.16112499999871943
+            },
+            {
+              "name": "write",
+              "ms": 0.3812499999985448
+            },
+            {
+              "name": "run_tests",
+              "ms": 2053.9310419999965
+            },
+            {
+              "name": "write",
+              "ms": 0.4398749999963911
+            },
+            {
+              "name": "run_tests",
+              "ms": 2052.8384170000063
+            },
+            {
+              "name": "write",
+              "ms": 5.1197920000049635
+            },
+            {
+              "name": "run_tests",
+              "ms": 2090.9281249999985
+            }
+          ],
+          "requestCount": 12,
+          "speculations": [
+            {
+              "toolCallId": "d84289993",
+              "status": "mismatch",
+              "headStartMs": 2053.7739589999983,
+              "generationMs": 299
+            },
+            {
+              "toolCallId": "3a79d7d94",
+              "status": "mismatch",
+              "headStartMs": 2052.752416000003,
+              "generationMs": 299
+            },
+            {
+              "toolCallId": "6d713b1cd",
+              "status": "accepted",
+              "headStartMs": 2090.7393329999977,
+              "generationMs": 299
+            }
+          ]
+        },
+        {
+          "task": "wordy",
+          "repetition": 1,
+          "speculative": false,
+          "latencyMs": 2000,
+          "wallMs": 11132.005750000004,
+          "passed": true,
+          "testsRun": 25,
+          "turns": 10,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.3740410000027623
+            },
+            {
+              "name": "read",
+              "ms": 0.20533399999840185
+            },
+            {
+              "name": "read",
+              "ms": 0.16566699999384582
+            },
+            {
+              "name": "write",
+              "ms": 0.39083400000527035
+            },
+            {
+              "name": "run_tests",
+              "ms": 2092.728249999993
+            },
+            {
+              "name": "write",
+              "ms": 3.050542000011774
+            },
+            {
+              "name": "run_tests",
+              "ms": 2114.474000000002
+            },
+            {
+              "name": "write",
+              "ms": 0.24858400000084657
+            },
+            {
+              "name": "run_tests",
+              "ms": 2111.866750000001
+            }
+          ],
+          "requestCount": 10,
+          "speculations": []
+        },
+        {
+          "task": "wordy",
+          "repetition": 2,
+          "speculative": false,
+          "latencyMs": 2000,
+          "wallMs": 11049.26041599999,
+          "passed": true,
+          "testsRun": 25,
+          "turns": 10,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.8933750000142027
+            },
+            {
+              "name": "read",
+              "ms": 6.459583000003477
+            },
+            {
+              "name": "read",
+              "ms": 0.25691700000606943
+            },
+            {
+              "name": "write",
+              "ms": 0.5934590000106255
+            },
+            {
+              "name": "run_tests",
+              "ms": 2127.6864579999965
+            },
+            {
+              "name": "write",
+              "ms": 0.5105420000036247
+            },
+            {
+              "name": "run_tests",
+              "ms": 2053.507249999995
+            },
+            {
+              "name": "write",
+              "ms": 0.2892089999950258
+            },
+            {
+              "name": "run_tests",
+              "ms": 2057.3680840000015
+            }
+          ],
+          "requestCount": 10,
+          "speculations": []
+        },
+        {
+          "task": "wordy",
+          "repetition": 2,
+          "speculative": true,
+          "latencyMs": 2000,
+          "wallMs": 10664.915584000002,
+          "passed": true,
+          "testsRun": 25,
+          "turns": 10,
+          "error": null,
+          "tools": [
+            {
+              "name": "read",
+              "ms": 0.42970799999602605
+            },
+            {
+              "name": "read",
+              "ms": 0.6667920000036247
+            },
+            {
+              "name": "read",
+              "ms": 0.17650000000139698
+            },
+            {
+              "name": "write",
+              "ms": 0.37579200000618584
+            },
+            {
+              "name": "run_tests",
+              "ms": 2056.3364589999983
+            },
+            {
+              "name": "write",
+              "ms": 0.26945800000976305
+            },
+            {
+              "name": "run_tests",
+              "ms": 2050.5885839999974
+            },
+            {
+              "name": "write",
+              "ms": 0.20787500000733417
+            },
+            {
+              "name": "run_tests",
+              "ms": 2058.9638339999947
+            }
+          ],
+          "requestCount": 12,
+          "speculations": [
+            {
+              "toolCallId": "d84289993",
+              "status": "mismatch",
+              "headStartMs": 2056.2148749999906,
+              "generationMs": 299
+            },
+            {
+              "toolCallId": "3a79d7d94",
+              "status": "mismatch",
+              "headStartMs": 2050.513042000006,
+              "generationMs": 299
+            },
+            {
+              "toolCallId": "6d713b1cd",
+              "status": "accepted",
+              "headStartMs": 2058.8804999999993,
+              "generationMs": 299
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

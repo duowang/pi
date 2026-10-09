@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Added opt-in `SpeculativeStream` for one-turn tool-result prediction with exact request validation, cancellation, and isolated output, plus a paired coding-task benchmark and recorded-trajectory replay runner. See `SPECULATION.md` at the repository root.
+
 ## [1.1.0] - 2026-10-07
 
 ### Added

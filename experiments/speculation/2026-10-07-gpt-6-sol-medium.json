@@ -1,0 +1,5046 @@
+{
+  "gpt-6-sol-medium-chatgpt-smoke": {
+    "protocol": {
+      "settings": {
+        "provider": "openai",
+        "model": "gpt-6-sol",
+        "reasoning": "medium",
+        "routing": "",
+        "latencyMs": 0,
+        "speculative": false,
+        "mismatchPolicy": "cancel",
+        "maxTurns": 16,
+        "timeoutMs": 300000
+      },
+      "auth": "chatgpt",
+      "sourceHashes": {
+        "packages/agent/src/speculation.ts": "c52dfae426e1d332c6d1b81deb2981f16fd3c6893bbec37dad5dd3e898cc283d",
+        "packages/agent/examples/speculative/runner.ts": "c770556c3899e995ef02aa44d96d619fa3e47aa3950d60e0096b422767a8ad55",
+        "packages/agent/examples/speculative/cli.ts": "e2ab7a94f4a0af35f65620f31a660bf1b0d52716577b1ae104bf584ac55f36f4"
+      },
+      "taskHashes": {
+        "grade-school": "6da35a17199c8d995dfe39c874fb296513fdda6b7783a9ab589f0d5e51f4d6ee"
+      },
+      "tasks": [
+        "grade-school"
+      ],
+      "repeats": 1,
+      "latencies": [
+        0
+      ],
+      "datasetRevision": "7e0611e77b54e2dea774cdc0aa00cf9f7ed6144f",
+      "piRevision": "1cedd32724abfcb0915f76cc61b6827e2c16dbad",
+      "startedAt": "2026-10-08T02:13:44.905Z",
+      "design": "Paired, order-alternating, sequential runs; fresh task workspace and original tests; latency is injected only after real test execution in both arms; final grading outside timed region. Public tests, not held out. No provider fallback."
+    },
+    "results": [
+      {
+        "task": "grade-school",
+        "speculative": false,
+        "latencyMs": 0,
+        "wallMs": 17785.17975,
+        "passed": true,
+        "testsRun": 20,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2026.680167,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "ad7970d86c439012162e210d179ceb1a7c3cd00d673766f4ef5184bad81152d2"
+          },
+          {
+            "ms": 2317.4172919999996,
+            "input": 497,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "2f06485ae00764ba6fec9bea59b2747958296d582cf8e1e5a7999e441a994730"
+          },
+          {
+            "ms": 2158.3834589999997,
+            "input": 579,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "7b892bbb860b5b90e93569be6ca49b730e42f88d07166cbcc3eb24e8941efbe9"
+          },
+          {
+            "ms": 5927.15725,
+            "input": 2249,
+            "output": 214,
+            "stopReason": "toolUse",
+            "promptHash": "27d71a391d14ed2ffd99d809bf680b73369e77913da693e72fe579d3b4c4ae9c"
+          },
+          {
+            "ms": 2991.5763750000006,
+            "input": 2475,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "e22549ff8e3d253c71a4a263fd50327c9d8eb202eea9855cfd8f5940123dac6f"
+          },
+          {
+            "ms": 2285.6714170000014,
+            "input": 2505,
+            "output": 24,
+            "stopReason": "stop",
+            "promptHash": "7b1c16e9214dbc86c9e4c5fb212ec0f01747a95d2e8f5dec86589986c22af3cb"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 1.6604999999999563
+          },
+          {
+            "name": "read",
+            "ms": 0.24029200000040873
+          },
+          {
+            "name": "read",
+            "ms": 0.197624999999789
+          },
+          {
+            "name": "write",
+            "ms": 1.609375
+          },
+          {
+            "name": "run_tests",
+            "ms": 72.52729199999885
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "grade-school",
+        "speculative": true,
+        "latencyMs": 0,
+        "wallMs": 17673.427292,
+        "passed": true,
+        "testsRun": 20,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 1947.226999999999,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "53921b64c1f5c2fee6e07d54e47f948c78b7dea0c0fea57bd389317c19667b11"
+          },
+          {
+            "ms": 2271.9060420000023,
+            "input": 497,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "76279329cd34a62f9c570439513c0a3abea9aaf8d498ebdc98d63097994ebd60"
+          },
+          {
+            "ms": 2250.6423749999994,
+            "input": 579,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "cc44dea6aa7d575036d4073c4cd6359d8ec91090107f61798df541a611057109"
+          },
+          {
+            "ms": 5416.672875,
+            "input": 2249,
+            "output": 212,
+            "stopReason": "toolUse",
+            "promptHash": "16970697e292abff2eca468e76b9aa829f9f25646600968f43ff36ac1c957fce"
+          },
+          {
+            "ms": 2721.915832999999,
+            "input": 2473,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "b4d9e708a282fdded0b4d040b8f35816f71d02b27b6534b5e038cb93145c26e6"
+          },
+          {
+            "ms": 3055.4876250000016,
+            "input": 455,
+            "output": 30,
+            "stopReason": "stop",
+            "promptHash": "860f7db3cbf09bf1292727b02d2383b30c8873ea51a9c625d0cf184ec84d6392"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_wrlaWtgerEabRMfoqyDg9HjL|fc_0a369fcb8cb28770016ac6fc7922e887d098e9d2b6baebf3ec",
+            "status": "accepted",
+            "headStartMs": 49.943249999996624,
+            "generationMs": 3055,
+            "usage": {
+              "input": 455,
+              "output": 30,
+              "cacheRead": 2048,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 2533,
+              "cost": {
+                "input": 0.00091,
+                "output": 0.00030000000000000003,
+                "cacheRead": 0.00040960000000000004,
+                "cacheWrite": 0,
+                "total": 0.0016196000000000001
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.4428750000006403
+          },
+          {
+            "name": "read",
+            "ms": 0.1965409999975236
+          },
+          {
+            "name": "read",
+            "ms": 0.24475000000165892
+          },
+          {
+            "name": "write",
+            "ms": 0.7122500000004948
+          },
+          {
+            "name": "run_tests",
+            "ms": 56.04358299999876
+          }
+        ],
+        "repetition": 0
+      }
+    ]
+  },
+  "gpt-6-sol-medium-chatgpt-full": {
+    "protocol": {
+      "settings": {
+        "provider": "openai",
+        "model": "gpt-6-sol",
+        "reasoning": "medium",
+        "routing": "",
+        "latencyMs": 0,
+        "speculative": false,
+        "mismatchPolicy": "cancel",
+        "maxTurns": 16,
+        "timeoutMs": 300000
+      },
+      "auth": "chatgpt",
+      "sourceHashes": {
+        "packages/agent/src/speculation.ts": "c52dfae426e1d332c6d1b81deb2981f16fd3c6893bbec37dad5dd3e898cc283d",
+        "packages/agent/examples/speculative/runner.ts": "c770556c3899e995ef02aa44d96d619fa3e47aa3950d60e0096b422767a8ad55",
+        "packages/agent/examples/speculative/cli.ts": "e2ab7a94f4a0af35f65620f31a660bf1b0d52716577b1ae104bf584ac55f36f4"
+      },
+      "taskHashes": {
+        "wordy": "9d94efbc7be9e016efc15ecb9b18ed3bdd76a892651149e6d36cf3118e569f40",
+        "grade-school": "6da35a17199c8d995dfe39c874fb296513fdda6b7783a9ab589f0d5e51f4d6ee",
+        "phone-number": "6ba8d39584450eaa3df16275329efb63f5e41cd6a1f490da4e0675f6f745262b",
+        "transpose": "68f4c116ba58dee912091e783572ec714c1a6845228895f445487a8f1611505c",
+        "forth": "074f1047633c248a88990569ee52cde91ace66a2a2928621e2609f7effbe58df",
+        "bowling": "fdff65867c389bc89eec761b5910fd0778ed3efe3fae3cc9d4b8170025ad1ac9"
+      },
+      "tasks": [
+        "wordy",
+        "grade-school",
+        "phone-number",
+        "transpose",
+        "forth",
+        "bowling"
+      ],
+      "repeats": 2,
+      "latencies": [
+        0,
+        2000
+      ],
+      "datasetRevision": "7e0611e77b54e2dea774cdc0aa00cf9f7ed6144f",
+      "piRevision": "1cedd32724abfcb0915f76cc61b6827e2c16dbad",
+      "startedAt": "2026-10-08T02:14:28.260Z",
+      "design": "Paired, order-alternating, sequential runs; fresh task workspace and original tests; latency is injected only after real test execution in both arms; final grading outside timed region. Public tests, not held out. No provider fallback."
+    },
+    "results": [
+      {
+        "task": "wordy",
+        "speculative": false,
+        "latencyMs": 0,
+        "wallMs": 46765.793625,
+        "passed": true,
+        "testsRun": 25,
+        "turns": 8,
+        "requests": [
+          {
+            "ms": 2313.19025,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "6bdcc4fbcc8eb970a250b36b2cbbfd5d726b79729ce6cd62a3bf7ca4b878a2ad"
+          },
+          {
+            "ms": 2808.5643749999995,
+            "input": 505,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "4eff32e6407384a56c1ae5d78a592d45566ef348e7201f9a46bad25b4cf5c311"
+          },
+          {
+            "ms": 2192.8882919999996,
+            "input": 541,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "d712df5ba0af0ee8a1253b33d8cdfeb7966b0671ae4201b85ade12472786fcfa"
+          },
+          {
+            "ms": 15666.541790999998,
+            "input": 1641,
+            "output": 764,
+            "stopReason": "toolUse",
+            "promptHash": "adf17847ae8286afca7c7ab5b478bf12ee80873ab81974ad56d2fb8e60240001"
+          },
+          {
+            "ms": 2906.6585410000007,
+            "input": 881,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "23236e6ee681a0b62d4b29ce52e6b7e0dbbd285faaf9f454b39fb83defbcd97e"
+          },
+          {
+            "ms": 15680.732708,
+            "input": 2610,
+            "output": 603,
+            "stopReason": "toolUse",
+            "promptHash": "4f703cbe5a36b15cf0450b4f18fa09665dfa805ade17d7a2570a93c3f10e3eb0"
+          },
+          {
+            "ms": 1986.1054169999989,
+            "input": 3225,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "8b25abd0a9479973044da646dcb2dd8ee464556975ab7b78916f0632de134d2a"
+          },
+          {
+            "ms": 3063.8139999999985,
+            "input": 3255,
+            "output": 36,
+            "stopReason": "stop",
+            "promptHash": "cfb9fee1585856a5bdc9b291bf1f68321ecaee4fd4384c6a01556823f39b4acd"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 2.802458000000115
+          },
+          {
+            "name": "read",
+            "ms": 0.27475000000049477
+          },
+          {
+            "name": "read",
+            "ms": 0.32420899999851827
+          },
+          {
+            "name": "write",
+            "ms": 1.0300829999978305
+          },
+          {
+            "name": "run_tests",
+            "ms": 69.45891599999959
+          },
+          {
+            "name": "write",
+            "ms": 0.4622910000034608
+          },
+          {
+            "name": "run_tests",
+            "ms": 69.79262500000186
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "wordy",
+        "speculative": true,
+        "latencyMs": 0,
+        "wallMs": 38422.58470800001,
+        "passed": true,
+        "testsRun": 25,
+        "turns": 8,
+        "requests": [
+          {
+            "ms": 2331.3104999999996,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "abddce3b826ee5a7b965a3295420b62398588243cc3fe5cef954f9490b08c54b"
+          },
+          {
+            "ms": 3021.7611250000045,
+            "input": 505,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "939a65a95a0a7f0a7a4b4015212886eb91167a9884d7fa6169f648891a5e0506"
+          },
+          {
+            "ms": 2286.5789579999982,
+            "input": 541,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "3b3647f595c944681018625d3175d2ab6a3b19ade1116ca5c70875717088c153"
+          },
+          {
+            "ms": 12935.813916999992,
+            "input": 1641,
+            "output": 643,
+            "stopReason": "toolUse",
+            "promptHash": "66721ec04261f21cd7f0c100e48b5eff7dbd7e951f1e4ebeec6f31af4e0952f9"
+          },
+          {
+            "ms": 2745.9463749999995,
+            "input": 2296,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "5716b12cb2a0d51b0637938feb825030b006de034e68d67391c38d9589af9f28"
+          },
+          {
+            "ms": 82.70812500000466,
+            "input": 0,
+            "output": 0,
+            "stopReason": "aborted",
+            "promptHash": "4e423f9eeb718587a1769b8caa2755ae3e73543c8d2fc0b2fbeae4e7bd1ebf9e"
+          },
+          {
+            "ms": 10169.295750000005,
+            "input": 2489,
+            "output": 478,
+            "stopReason": "toolUse",
+            "promptHash": "0cece360d698da31cc888803bf9067ad9ba860ec4a3e5d8f5ae4b948e9cc7278"
+          },
+          {
+            "ms": 2017.5864579999907,
+            "input": 2979,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "ab2226081ef97bf679890911534ca3b7777a9c01a973781685acecfafd9e94d8"
+          },
+          {
+            "ms": 2818.4585420000076,
+            "input": 3009,
+            "output": 31,
+            "stopReason": "stop",
+            "promptHash": "a9e49a21b0ea1870a0794ebbbebbaf2242d3c4a7cc52c1323e3a270997a03826"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_dTCV50JDW4RlVVGAd2akKBq0|fc_0aff0746358abddf016ac6fcc9ebd887d093179c82b40705e3",
+            "status": "mismatch",
+            "headStartMs": 81.64354099999764
+          },
+          {
+            "toolCallId": "call_3HiiMz3mO2jw1UKX8GEDP5e3|fc_0aff0746358abddf016ac6fcd66ac087d099b52a3fc0373858",
+            "status": "accepted",
+            "headStartMs": 71.47229099999822,
+            "generationMs": 2818,
+            "usage": {
+              "input": 3009,
+              "output": 31,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 3040,
+              "cost": {
+                "input": 0.006018,
+                "output": 0.00031,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.006328
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.3392080000048736
+          },
+          {
+            "name": "read",
+            "ms": 0.25391600000148173
+          },
+          {
+            "name": "read",
+            "ms": 0.2537090000041644
+          },
+          {
+            "name": "write",
+            "ms": 0.9703330000047572
+          },
+          {
+            "name": "run_tests",
+            "ms": 90.0284590000083
+          },
+          {
+            "name": "write",
+            "ms": 0.5687920000054874
+          },
+          {
+            "name": "run_tests",
+            "ms": 71.66237499999988
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "grade-school",
+        "speculative": true,
+        "latencyMs": 0,
+        "wallMs": 18575.107290999993,
+        "passed": true,
+        "testsRun": 20,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2220.199790999992,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "d4561eebc748ce84da14d34332fe5ddefa8fdec740fff55f0436bc9ddd56f2bd"
+          },
+          {
+            "ms": 2953.655083999998,
+            "input": 497,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "e463eae794b28e58120721150521736a0a67043bf1b377b030fbcce7a518b816"
+          },
+          {
+            "ms": 2126.8960840000072,
+            "input": 579,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "69b45eac555103549494c1ccc0792ba88c966247fd9b8ce07d31db8e6043dfdc"
+          },
+          {
+            "ms": 6103.9699580000015,
+            "input": 2249,
+            "output": 215,
+            "stopReason": "toolUse",
+            "promptHash": "a61ac17ac090a60e77508299fc0e7a8f949e8d71f4a61471150672e122696b0f"
+          },
+          {
+            "ms": 2621.5643750000017,
+            "input": 2476,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "a0f24be8e456b2f4dc19a4c4e14d518479265a69519e2d4f5a0b527bc855fa58"
+          },
+          {
+            "ms": 2546.7575829999987,
+            "input": 2506,
+            "output": 32,
+            "stopReason": "stop",
+            "promptHash": "09a80178d6161d8a1bbc675a64da3a1c80e300f135e9a9529a99979752588b16"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_Chn9IDQDZ6DAo1hA4omLgRFT|fc_0511445042c35d3d016ac6fce8dcb087d0abc08708e646bcd5",
+            "status": "accepted",
+            "headStartMs": 54.363082999989274,
+            "generationMs": 2547,
+            "usage": {
+              "input": 2506,
+              "output": 32,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 2538,
+              "cost": {
+                "input": 0.005012,
+                "output": 0.00032,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.005332
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.2842079999973066
+          },
+          {
+            "name": "read",
+            "ms": 0.13533400000596885
+          },
+          {
+            "name": "read",
+            "ms": 0.15516700000443961
+          },
+          {
+            "name": "write",
+            "ms": 0.38116699999955017
+          },
+          {
+            "name": "run_tests",
+            "ms": 54.507582999998704
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "grade-school",
+        "speculative": false,
+        "latencyMs": 0,
+        "wallMs": 19624.883959,
+        "passed": true,
+        "testsRun": 20,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2624.935666000005,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "4d6b7b6615980fb103362ca696f1ffc73836ec8bb5ad1d833474f08b7c6f5098"
+          },
+          {
+            "ms": 2037.8865829999995,
+            "input": 497,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "d04871f7a58769d24dd56f6a8a8bcf709167e509f7392e1ab718d7a85faed160"
+          },
+          {
+            "ms": 3393.5151659999974,
+            "input": 579,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "d0f962d9b1a23b0c900d677fbd5eaf85b55ce4cf0b9657e14d815622cda6b7d9"
+          },
+          {
+            "ms": 6215.561874999999,
+            "input": 2249,
+            "output": 213,
+            "stopReason": "toolUse",
+            "promptHash": "7175ce31e46d37d5b90bba55ce9fa2127676bd246548f7c7b7dfaa6147ff6023"
+          },
+          {
+            "ms": 2401.5149999999994,
+            "input": 2474,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "9c5db4819d076e33e3c605437ddd52764c893b244eb9b142b95c515ad0bcef70"
+          },
+          {
+            "ms": 2883.126999999993,
+            "input": 456,
+            "output": 30,
+            "stopReason": "stop",
+            "promptHash": "093a69c038d2412cad3b1e2a744e49cd91dc4861514a6a9165b9cdbd980a74c0"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.5449999999982538
+          },
+          {
+            "name": "read",
+            "ms": 0.1930419999989681
+          },
+          {
+            "name": "read",
+            "ms": 0.20733299999847077
+          },
+          {
+            "name": "write",
+            "ms": 0.41662499999802094
+          },
+          {
+            "name": "run_tests",
+            "ms": 65.78070800000569
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "phone-number",
+        "speculative": false,
+        "latencyMs": 0,
+        "wallMs": 24802.990332999994,
+        "passed": true,
+        "testsRun": 21,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2129.545000000013,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "eead05c03bdd27e3589c8c928b8f23c6f7fb5836e957ba9afd22de819a51a532"
+          },
+          {
+            "ms": 2173.887499999997,
+            "input": 536,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "9225da84c3fdafe3a6c1213624dd82c9bdb0c0da55e8311aadace936f8c8f01f"
+          },
+          {
+            "ms": 3050.813417000012,
+            "input": 581,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "d64bfd33d3be82ef6f3470dbf0df45e406cd0244519ef8494c02365ee43feaee"
+          },
+          {
+            "ms": 10572.427124999987,
+            "input": 1864,
+            "output": 452,
+            "stopReason": "toolUse",
+            "promptHash": "f744dea9a264ad04ce303106067c9773f51fae9b6576e18dd8b4667068a3fd2b"
+          },
+          {
+            "ms": 3265.2858749999723,
+            "input": 2328,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "5bf9c731df594e2f4dd0a4e14767bce957f1b20662289f414802551fd20b442b"
+          },
+          {
+            "ms": 3558.0109159999993,
+            "input": 2358,
+            "output": 30,
+            "stopReason": "stop",
+            "promptHash": "043ced0e03f9baa12450c1e3cd9f57f859d8feb98dff530ed139a773e28890a8"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.25029100000392646
+          },
+          {
+            "name": "read",
+            "ms": 0.14037500000267755
+          },
+          {
+            "name": "read",
+            "ms": 0.17662499999278225
+          },
+          {
+            "name": "write",
+            "ms": 0.49720899999374524
+          },
+          {
+            "name": "run_tests",
+            "ms": 50.87533300000359
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "phone-number",
+        "speculative": true,
+        "latencyMs": 0,
+        "wallMs": 21314.078500000003,
+        "passed": true,
+        "testsRun": 21,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2293.545207999996,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "a77ea2f2f37016631c603c315062fa2aaf9b190e4d11c27150257de505943484"
+          },
+          {
+            "ms": 2151.989458999975,
+            "input": 536,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "779447d53b284811c8fcdf3b890ba0c48848c9a83d5620b929bb8bd143499c58"
+          },
+          {
+            "ms": 2187.404749999987,
+            "input": 581,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "6be0359541b6d355bfd3e9ab3d3a8ea1d08b1bb342a343b8af0073479674899f"
+          },
+          {
+            "ms": 10556.333125000005,
+            "input": 200,
+            "output": 467,
+            "stopReason": "toolUse",
+            "promptHash": "63cf22432ff6b5ca1e2090078f90931e92cef4d2a1cf9d3f9aee0a440853aa8a"
+          },
+          {
+            "ms": 1766.8560419999994,
+            "input": 2343,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "1da572551bb27a9b588bc7eb8d4a2893f0463e3fc7a046151f0e53c80ef28d0a"
+          },
+          {
+            "ms": 2354.3885829999927,
+            "input": 2373,
+            "output": 30,
+            "stopReason": "stop",
+            "promptHash": "1805daf03d08a3d33e2fddd390be317387189bfe6b092b8d5efe0c806b692df4"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_QzqwuHfXzaWuG4LmmothA7Yj|fc_09ca98a82af7ea18016ac6fd2b70a087d0bdb9ba63e56ecb76",
+            "status": "accepted",
+            "headStartMs": 84.53800000000047,
+            "generationMs": 2354,
+            "usage": {
+              "input": 2373,
+              "output": 30,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 2403,
+              "cost": {
+                "input": 0.004746,
+                "output": 0.00030000000000000003,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.005046
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.2751660000067204
+          },
+          {
+            "name": "read",
+            "ms": 0.14849999998114072
+          },
+          {
+            "name": "read",
+            "ms": 0.24170800001593307
+          },
+          {
+            "name": "write",
+            "ms": 0.5610410000081174
+          },
+          {
+            "name": "run_tests",
+            "ms": 85.68666700000176
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "transpose",
+        "speculative": true,
+        "latencyMs": 0,
+        "wallMs": 18743.26133400001,
+        "passed": true,
+        "testsRun": 12,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2246.5962910000235,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "a0353772b34fd7169dc8132f7c93f17bbce8009d4656ac2e4ed959fd7e85e1bc"
+          },
+          {
+            "ms": 2225.262458000012,
+            "input": 441,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "aa61aca4a1507a7f1b6761c4027fb70a9f89a41543028a4ea8878514792e8963"
+          },
+          {
+            "ms": 3395.746374999988,
+            "input": 476,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "14e5ff1e8b94e2cd3a473f7b1c76d79399af11c309f55f55db6ac247ddc03f2d"
+          },
+          {
+            "ms": 6687.442582999996,
+            "input": 1235,
+            "output": 238,
+            "stopReason": "toolUse",
+            "promptHash": "423d67aa197b1bf3a6747c8c5be552dc85503c3ce67b589f17c3fe0caa1096d9"
+          },
+          {
+            "ms": 1830.6482079999987,
+            "input": 1485,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "ed8bdb16eda6e64a85c1ea248143ebc03af9cd3068c8091e1be74e07a788f898"
+          },
+          {
+            "ms": 2354.7460000000137,
+            "input": 1515,
+            "output": 31,
+            "stopReason": "stop",
+            "promptHash": "b8d6aa3c8e48e4eeb5db5f7ec6573d3316716d8d159d5fca05d034751b535b56"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_5LqXnHYvSqXKlTkm6hcnbHJV|fc_0b7fb7f73335ad53016ac6fd3e495487d0b11a748d600046a7",
+            "status": "accepted",
+            "headStartMs": 81.95679100000416,
+            "generationMs": 2355,
+            "usage": {
+              "input": 1515,
+              "output": 31,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 1546,
+              "cost": {
+                "input": 0.0030299999999999997,
+                "output": 0.00031,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.0033399999999999997
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.23045799997635186
+          },
+          {
+            "name": "read",
+            "ms": 0.36070799999288283
+          },
+          {
+            "name": "read",
+            "ms": 0.29104099998949096
+          },
+          {
+            "name": "write",
+            "ms": 0.37979199999244884
+          },
+          {
+            "name": "run_tests",
+            "ms": 82.21433300001081
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "transpose",
+        "speculative": false,
+        "latencyMs": 0,
+        "wallMs": 16393.17499999999,
+        "passed": true,
+        "testsRun": 12,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2363.1710420000018,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "415699a5d871f2aa398c2d17be61bd69d506e1ba85ff4942172d7352a8117a5a"
+          },
+          {
+            "ms": 1885.5445419999887,
+            "input": 441,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "2d17c209234e47a948cd2fbec7e33250365ffe64d00fbb11fadb74684dec93b8"
+          },
+          {
+            "ms": 2382.7940409999865,
+            "input": 476,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "69fd24b4da3c6beb392b6d55b549add01f1122b506d9619fcd40e0232f31e66c"
+          },
+          {
+            "ms": 5424.182208000013,
+            "input": 1235,
+            "output": 206,
+            "stopReason": "toolUse",
+            "promptHash": "db9769a3837f6d7b0b5b8e8b57246b615ded8a83adeadeb9c05b2e0fb000ed24"
+          },
+          {
+            "ms": 2075.4247499999765,
+            "input": 1453,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "73e6e5d725aad12eaa56c06111bfce6de45546451949fabfda5e091ae4e74fda"
+          },
+          {
+            "ms": 2197.6760829999985,
+            "input": 1483,
+            "output": 27,
+            "stopReason": "stop",
+            "promptHash": "4249098a68f7d396d33e21dba61c15e9b09acfae00062da887e8cb7694555d6c"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.3942500000121072
+          },
+          {
+            "name": "read",
+            "ms": 0.3780830000177957
+          },
+          {
+            "name": "read",
+            "ms": 0.4301250000135042
+          },
+          {
+            "name": "write",
+            "ms": 0.42308300000149757
+          },
+          {
+            "name": "run_tests",
+            "ms": 61.42520899997908
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "forth",
+        "speculative": false,
+        "latencyMs": 0,
+        "wallMs": 28395.724832999986,
+        "passed": true,
+        "testsRun": 54,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2580.780083999998,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "20bab792557829344b67c971183024d6a3b6b1b286f4c3e5cb37361e7ccdb191"
+          },
+          {
+            "ms": 2857.234208000009,
+            "input": 440,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "94dd07024e23cd9810da247f1aabab0a0439e5add72ed4200d2d2964ac86d0a0"
+          },
+          {
+            "ms": 2635.898959000013,
+            "input": 486,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "170f37d144fe4918973c7dadb6794881a91f1361d932b21d4d051b7d5000e05c"
+          },
+          {
+            "ms": 15129.92958299999,
+            "input": 3222,
+            "output": 741,
+            "stopReason": "toolUse",
+            "promptHash": "5515ac39428833b2f40674f7a36872f858a67f77ece556908ae5581448a00abf"
+          },
+          {
+            "ms": 2414.3988750000135,
+            "input": 3975,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "8f2611e2c6edc316deae27d88a8d4d5f9ea9f5ec248376caae5044b5291002de"
+          },
+          {
+            "ms": 2718.5508329999866,
+            "input": 4005,
+            "output": 35,
+            "stopReason": "stop",
+            "promptHash": "8417efade2cfc6a3ed9342e39daa4612699e3f9834cb64e91e3281b468c38792"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.3044170000066515
+          },
+          {
+            "name": "read",
+            "ms": 0.15033400000538677
+          },
+          {
+            "name": "read",
+            "ms": 0.1431670000019949
+          },
+          {
+            "name": "write",
+            "ms": 0.4882919999945443
+          },
+          {
+            "name": "run_tests",
+            "ms": 56.88420900001074
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "forth",
+        "speculative": true,
+        "latencyMs": 0,
+        "wallMs": 29742.340540999983,
+        "passed": true,
+        "testsRun": 54,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2250.1675839999807,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "1e559a3670cc55ff409c6a0ea757d367ecb1b8965889074a4e940a0e958a8eed"
+          },
+          {
+            "ms": 2863.652166999993,
+            "input": 440,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "af8aaf3cacb987e5d81ebe383e9d17aee527b1dbc98935138d64420635667d83"
+          },
+          {
+            "ms": 2139.6563749999914,
+            "input": 486,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "7a849761198d18ebb6a47a1ee153756c3ff6f809be53b58bfb48c45745478061"
+          },
+          {
+            "ms": 16379.149166999996,
+            "input": 3222,
+            "output": 830,
+            "stopReason": "toolUse",
+            "promptHash": "ac691931d0233910faa1769270ecc6f81507d1d789a20c77d51e1a8a9926d658"
+          },
+          {
+            "ms": 2507.4417910000193,
+            "input": 4064,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "05a025ea432bb2222ed6918e44e05aa158f3f90488e316ade5eb66b94d72dd56"
+          },
+          {
+            "ms": 3599.589584000001,
+            "input": 4094,
+            "output": 37,
+            "stopReason": "stop",
+            "promptHash": "235baaf93ab7530b6375fc8ecadd8344ac4b17ee1c50879c267a0fc18292fe51"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_BqQiWndkILcCAXBc3InF8mec|fc_03cf1bb1066d0b78016ac6fd8798f087d09230090a6216ec80",
+            "status": "accepted",
+            "headStartMs": 112.64566700000432,
+            "generationMs": 3599,
+            "usage": {
+              "input": 4094,
+              "output": 37,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 4131,
+              "cost": {
+                "input": 0.008187999999999999,
+                "output": 0.00037000000000000005,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.008558
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.2277919999905862
+          },
+          {
+            "name": "read",
+            "ms": 0.2197089999972377
+          },
+          {
+            "name": "read",
+            "ms": 0.3723750000062864
+          },
+          {
+            "name": "write",
+            "ms": 0.3372090000193566
+          },
+          {
+            "name": "run_tests",
+            "ms": 112.88704100000905
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "bowling",
+        "speculative": true,
+        "latencyMs": 0,
+        "wallMs": 28763.718125000014,
+        "passed": true,
+        "testsRun": 31,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 4063.8788339999737,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "a1e7169ddb776af19249c7282cdee855eaf2fa62cf66e63cfd544e82353373b5"
+          },
+          {
+            "ms": 2808.0015840000124,
+            "input": 775,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "a43330a4c5bd2a96edb9d7c994b457cecd62ddedb786b421f343e686c1fe5547"
+          },
+          {
+            "ms": 2997.141082999995,
+            "input": 836,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "aa14ae4c2769be3d4a295934d301a482dd43f299a5a1e80e24d6110f1baf4e1f"
+          },
+          {
+            "ms": 14351.143959000008,
+            "input": 4028,
+            "output": 700,
+            "stopReason": "toolUse",
+            "promptHash": "4597413fdbad7a30f2c67ebc0290d67e4efde9137c1ab5ba3f68f9a8b7f81890"
+          },
+          {
+            "ms": 1993.7823339999886,
+            "input": 900,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "d312f649c37cbb818df6ede934f7857f7a1f552a7fca1bea83b740d9a0b5c8f6"
+          },
+          {
+            "ms": 2546.012584000011,
+            "input": 4770,
+            "output": 20,
+            "stopReason": "stop",
+            "promptHash": "0e6716be4b25ca57d0d1e2d0644fceb9b33fc54518ff76306962344ec48c34e6"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_fLpynloyVpS73FWiEUAp3me9|fc_0789d4fe290a0f23016ac6fda5be9c87d085b3a9cec20191ae",
+            "status": "accepted",
+            "headStartMs": 65.48649999999907,
+            "generationMs": 2546,
+            "usage": {
+              "input": 4770,
+              "output": 20,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 4790,
+              "cost": {
+                "input": 0.00954,
+                "output": 0.0002,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.00974
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.5230829999782145
+          },
+          {
+            "name": "read",
+            "ms": 0.25208299997029826
+          },
+          {
+            "name": "read",
+            "ms": 0.8284169999533333
+          },
+          {
+            "name": "write",
+            "ms": 0.6324169999570586
+          },
+          {
+            "name": "run_tests",
+            "ms": 65.69337499997346
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "bowling",
+        "speculative": false,
+        "latencyMs": 0,
+        "wallMs": 43917.074416999996,
+        "passed": true,
+        "testsRun": 31,
+        "turns": 8,
+        "requests": [
+          {
+            "ms": 1822.612792,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "bfd0e3872a12144ffbc06a0237aec710216a8daf97495f03b92405a06bd959ae"
+          },
+          {
+            "ms": 2382.093916999991,
+            "input": 775,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "c830e5f79b53986888a4297eb84d3437f481d9f25ba3297a1c8c5a873dafd470"
+          },
+          {
+            "ms": 2252.82616700005,
+            "input": 836,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "1670f2683219fdc0be1edb623c760f54c43a48a78dafaf55e542529f853d9963"
+          },
+          {
+            "ms": 15953.008207999985,
+            "input": 188,
+            "output": 764,
+            "stopReason": "toolUse",
+            "promptHash": "ec7696b69028deb25f1ac706778dc3caaed5e2d15c76ec4e5dc6e431c12a3713"
+          },
+          {
+            "ms": 2137.498332999996,
+            "input": 4804,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "cd2de131b9fc70f541996ea7726ee91079357395ad7247da6bf513987706e2c2"
+          },
+          {
+            "ms": 13076.186042000016,
+            "input": 5278,
+            "output": 585,
+            "stopReason": "toolUse",
+            "promptHash": "ff65b641757aa4e56940820b10cc26b0afb498955e4517ecc14764f85fba837e"
+          },
+          {
+            "ms": 3696.172542000015,
+            "input": 5875,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "eb188354b2e3673dcc1b2ba1217514cfbc4aaf330492810e19b1f1a4f41f2e11"
+          },
+          {
+            "ms": 2481.7072089999565,
+            "input": 5905,
+            "output": 35,
+            "stopReason": "stop",
+            "promptHash": "c68f0d2f0881af4f1216cfee3ec3620a8b1c210159c8e28791498bb4173e8128"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.38870899996254593
+          },
+          {
+            "name": "read",
+            "ms": 0.20595800003502518
+          },
+          {
+            "name": "read",
+            "ms": 0.34654200001386926
+          },
+          {
+            "name": "write",
+            "ms": 0.48954199999570847
+          },
+          {
+            "name": "run_tests",
+            "ms": 62.55299999995623
+          },
+          {
+            "name": "write",
+            "ms": 0.31287500000325963
+          },
+          {
+            "name": "run_tests",
+            "ms": 48.89037500001723
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "wordy",
+        "speculative": true,
+        "latencyMs": 0,
+        "wallMs": 41495.522291,
+        "passed": true,
+        "testsRun": 25,
+        "turns": 8,
+        "requests": [
+          {
+            "ms": 3384.233292000019,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "8cfc21cb576f2761e3233a69b6dc85330ddeb934c4e01c72c5dcc866e3e6262b"
+          },
+          {
+            "ms": 2840.1925000000047,
+            "input": 505,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "3858dc11ee05bd2eef64e9a4d8eeacf09df60fdd2c98f3f78c5998c12a39ad6a"
+          },
+          {
+            "ms": 2205.180458000046,
+            "input": 541,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "cd0f355ee2f53993bfb1fa8657fd6b687b013f28faf2dfc223c75cb24fb35510"
+          },
+          {
+            "ms": 13594.687042000005,
+            "input": 1641,
+            "output": 602,
+            "stopReason": "toolUse",
+            "promptHash": "74ca38b0c69fb0da7cdc63de77d0de556f28156019e2d4bdf77b25bad19654d7"
+          },
+          {
+            "ms": 3024.7789590000175,
+            "input": 2255,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "228b695c497fe07bdf50c9a435548a930626158f307348aa3cddc732cc490b1b"
+          },
+          {
+            "ms": 71.03275000001304,
+            "input": 0,
+            "output": 0,
+            "stopReason": "aborted",
+            "promptHash": "90f02d30a3df3e756babc70af7fcf89944a4e91735a78e912e30fd87b5f958fb"
+          },
+          {
+            "ms": 10902.831000000006,
+            "input": 2448,
+            "output": 440,
+            "stopReason": "toolUse",
+            "promptHash": "113730c8c8a229c49d28739fe90c4682261a26759ccdcce2eb1e37c2bf8c16cf"
+          },
+          {
+            "ms": 2416.033584000019,
+            "input": 2900,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "25714e620d21520cdac8cf66234b64347ca826cca95329abf044b5dccecc8609"
+          },
+          {
+            "ms": 3052.5705829999642,
+            "input": 2930,
+            "output": 32,
+            "stopReason": "stop",
+            "promptHash": "db3e8e32c30943cebbce455f1bfac2b809d66ee152bd28ae1fc1e271c4378b74"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_6JYvaQh8hrWRAXrudWoLRvkj|fc_09370e09c9d5b68c016ac6fded75cc87d091d6a3fb7c562cf6",
+            "status": "mismatch",
+            "headStartMs": 70.00520800001686
+          },
+          {
+            "toolCallId": "call_lQs2L52iZ4kEaaqsUj05B0WF|fc_09370e09c9d5b68c016ac6fdfabe9087d08ab162955fcee108",
+            "status": "accepted",
+            "headStartMs": 57.745166999986395,
+            "generationMs": 3052,
+            "usage": {
+              "input": 2930,
+              "output": 32,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 2962,
+              "cost": {
+                "input": 0.00586,
+                "output": 0.00032,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.00618
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.5033330000005662
+          },
+          {
+            "name": "read",
+            "ms": 0.3788329999661073
+          },
+          {
+            "name": "read",
+            "ms": 0.1804579999879934
+          },
+          {
+            "name": "write",
+            "ms": 0.4339170000166632
+          },
+          {
+            "name": "run_tests",
+            "ms": 70.1761660000193
+          },
+          {
+            "name": "write",
+            "ms": 0.25995800003875047
+          },
+          {
+            "name": "run_tests",
+            "ms": 57.9800830000313
+          }
+        ],
+        "repetition": 1
+      },
+      {
+        "task": "wordy",
+        "speculative": false,
+        "latencyMs": 0,
+        "wallMs": 44857.107707999996,
+        "passed": true,
+        "testsRun": 25,
+        "turns": 8,
+        "requests": [
+          {
+            "ms": 2125.3004580000415,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "378a1febbd74888cd8401bdb70155b1260b31007a343caccaf297b0e0aae022d"
+          },
+          {
+            "ms": 2016.8578750000452,
+            "input": 505,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "602fe6ea7e6f3a20b56f33852a34fa8565ddf77ffe5a358be36fd9c82caaea57"
+          },
+          {
+            "ms": 2259.1161250000005,
+            "input": 541,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "179c6af647620a091611464f78cbca258fa7643903d11503a06e17d293464a6f"
+          },
+          {
+            "ms": 16499.384834000026,
+            "input": 1641,
+            "output": 721,
+            "stopReason": "toolUse",
+            "promptHash": "517860b6dda2f087fa9ca447e9b641feb4254fa92ac3855db369ed516c7b54ee"
+          },
+          {
+            "ms": 2326.8192500000005,
+            "input": 2374,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "5f192b30f31592f6cb68070e230d2050fa882eccfc15bdd0e66e6bc05a053032"
+          },
+          {
+            "ms": 13497.250082999992,
+            "input": 391,
+            "output": 606,
+            "stopReason": "toolUse",
+            "promptHash": "d4b894d8f52ba55bbd1a23c8885be8ea989c4427ccb3febb61ec7597d53c97b1"
+          },
+          {
+            "ms": 2413.510249999992,
+            "input": 3185,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "51ef208e1a5645d82677db0341f4cd288bbec5d29a91c2e1d6aceb99c2375eb7"
+          },
+          {
+            "ms": 3590.3776249999646,
+            "input": 3215,
+            "output": 36,
+            "stopReason": "stop",
+            "promptHash": "57cfaec7830eab5a7189412860cc0592dee4784ddb84eb510a5f186f54e04236"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.29454199998872355
+          },
+          {
+            "name": "read",
+            "ms": 0.22512499999720603
+          },
+          {
+            "name": "read",
+            "ms": 0.18845800001872703
+          },
+          {
+            "name": "write",
+            "ms": 0.3569579999893904
+          },
+          {
+            "name": "run_tests",
+            "ms": 54.88283300003968
+          },
+          {
+            "name": "write",
+            "ms": 0.43125000002328306
+          },
+          {
+            "name": "run_tests",
+            "ms": 70.38316700002179
+          }
+        ],
+        "repetition": 1
+      },
+      {
+        "task": "grade-school",
+        "speculative": false,
+        "latencyMs": 0,
+        "wallMs": 19987.555333000026,
+        "passed": true,
+        "testsRun": 20,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 1934.9044170000125,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "296bbcdc773c810d84d04c7b242208b58dd65460185b0898bfb5bd41b0a6bc50"
+          },
+          {
+            "ms": 2510.591875000042,
+            "input": 497,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "4c087816ecde0f717b49cc0d4b738853e474aed852050860b989532b69ddf9c3"
+          },
+          {
+            "ms": 2544.1249170000083,
+            "input": 579,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "c1b018d3aa4db83524877af38666303e7b2199ede072421e0a909f5e958fab52"
+          },
+          {
+            "ms": 6770.479333000025,
+            "input": 2249,
+            "output": 215,
+            "stopReason": "toolUse",
+            "promptHash": "248074d8a43a89d5f280fd124da6b705040551b2682bd5d5a7204311d8e3f5e3"
+          },
+          {
+            "ms": 3091.5467920000083,
+            "input": 2476,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "7278fb9f795aaa2cc239427fb18e207c902b258d926dd4bb0d050b2fa5cc1e1f"
+          },
+          {
+            "ms": 3068.831917000003,
+            "input": 458,
+            "output": 31,
+            "stopReason": "stop",
+            "promptHash": "830e4abc20989219791f9ee9b80fdf470117a045da316f8b026f20fe78d391e8"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.31437500001629815
+          },
+          {
+            "name": "read",
+            "ms": 0.5782909999834374
+          },
+          {
+            "name": "read",
+            "ms": 0.1441249999916181
+          },
+          {
+            "name": "write",
+            "ms": 0.5636670000385493
+          },
+          {
+            "name": "run_tests",
+            "ms": 64.25954100000672
+          }
+        ],
+        "repetition": 1
+      },
+      {
+        "task": "grade-school",
+        "speculative": true,
+        "latencyMs": 0,
+        "wallMs": 20443.26675000001,
+        "passed": true,
+        "testsRun": 20,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 3017.7859590000007,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "f0b096b905ddb07ff260d02dcece9d6f01d298351ca7c3493afceac7cb0e1518"
+          },
+          {
+            "ms": 2451.730499999947,
+            "input": 497,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "920d78ffe4078db120ed60d67f0e3f7fbc7cfaf0c19dfefa1fbff1e0818efb60"
+          },
+          {
+            "ms": 2135.070416999981,
+            "input": 579,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "35e370f8f8ca092b35f1a051a0666d2351aac183ce93bb9f22d61fa1c40549d1"
+          },
+          {
+            "ms": 6729.578541999974,
+            "input": 2249,
+            "output": 214,
+            "stopReason": "toolUse",
+            "promptHash": "b6b2f622cf530caa13b225c87b5673094aa3db4e79ad1fabd254392f307c04c5"
+          },
+          {
+            "ms": 3010.923916999949,
+            "input": 427,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "c723bee736992cb999a3c9b99b470ccef98c6c0b44ac795c9b25d71009e69e87"
+          },
+          {
+            "ms": 3095.971542000014,
+            "input": 457,
+            "output": 31,
+            "stopReason": "stop",
+            "promptHash": "a0987e09b10e5526c2b46f4896f2cf118cb9c9cc817020ae43e4dbb17c7d2215"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_U7zhwOz8CQIbC16PAMoZKHUO|fc_0ce882657ffef0d4016ac6fe50434c87d090224999963874ea",
+            "status": "accepted",
+            "headStartMs": 68.61516599997412,
+            "generationMs": 3096,
+            "usage": {
+              "input": 457,
+              "output": 31,
+              "cacheRead": 2048,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 2536,
+              "cost": {
+                "input": 0.000914,
+                "output": 0.00031,
+                "cacheRead": 0.00040960000000000004,
+                "cacheWrite": 0,
+                "total": 0.0016336
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.21266600000672042
+          },
+          {
+            "name": "read",
+            "ms": 0.1325829999987036
+          },
+          {
+            "name": "read",
+            "ms": 0.24362500000279397
+          },
+          {
+            "name": "write",
+            "ms": 0.3580000000074506
+          },
+          {
+            "name": "run_tests",
+            "ms": 68.73058299999684
+          }
+        ],
+        "repetition": 1
+      },
+      {
+        "task": "phone-number",
+        "speculative": true,
+        "latencyMs": 0,
+        "wallMs": 20908.67320899997,
+        "passed": true,
+        "testsRun": 21,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2440.892374999996,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "83c9aae46deca5a5c96f809a694eaf74b8c6712b372a1515c3b8d69c93743020"
+          },
+          {
+            "ms": 2276.1095000000205,
+            "input": 536,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "5af931aaa4826ac3bbf3f54705c8b368d34864c8001cdc50b30708a341f3bc20"
+          },
+          {
+            "ms": 2236.2194579999777,
+            "input": 581,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "142b9b9babbbd015ea71867fac6b5c07b52b092a67745e255b82b5063b0a900e"
+          },
+          {
+            "ms": 9375.11595800001,
+            "input": 1864,
+            "output": 414,
+            "stopReason": "toolUse",
+            "promptHash": "3b8ad1ea41dc03f01a8cd206cef62e5cfbaf92212a3446d3aa226b13affa7105"
+          },
+          {
+            "ms": 2123.789374999993,
+            "input": 626,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "70fd771bc0888d80337cdc0db10fd2c0875747b1d40b143f496d8c2d6f0eef92"
+          },
+          {
+            "ms": 2453.771166999999,
+            "input": 2320,
+            "output": 30,
+            "stopReason": "stop",
+            "promptHash": "48de2a3633f72052ab43d6d2e51d92e25e6ceae23e047998839d9a4deaedab4a"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_FVgmJIq727SyySIhGz9zWSkK|fc_04b8a3a959406ac1016ac6fe65f43c87d08d7b715d0dd4264b",
+            "status": "accepted",
+            "headStartMs": 57.64733399997931,
+            "generationMs": 2454,
+            "usage": {
+              "input": 2320,
+              "output": 30,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 2350,
+              "cost": {
+                "input": 0.00464,
+                "output": 0.00030000000000000003,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.00494
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.2920000000158325
+          },
+          {
+            "name": "read",
+            "ms": 0.18550000002142042
+          },
+          {
+            "name": "read",
+            "ms": 0.15820900001563132
+          },
+          {
+            "name": "write",
+            "ms": 0.6607910000020638
+          },
+          {
+            "name": "run_tests",
+            "ms": 57.89158299996052
+          }
+        ],
+        "repetition": 1
+      },
+      {
+        "task": "phone-number",
+        "speculative": false,
+        "latencyMs": 0,
+        "wallMs": 22730.07112499996,
+        "passed": true,
+        "testsRun": 21,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2999.75441600004,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "eb6d26c6e46326899d7b9f077b2e1067455c4a9416edd648ad9f48488d36937f"
+          },
+          {
+            "ms": 2675.110667000001,
+            "input": 536,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "6b9e94b9c9ec157b20ffeda9f305a86c1b7d8a82fcbd416db57e8e97fc9d32c7"
+          },
+          {
+            "ms": 2319.154500000004,
+            "input": 581,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "36e5b774adb3620e3f1cf7919b1090b446e7ef603ca484ef7fe1c2f2286b878e"
+          },
+          {
+            "ms": 10086.12737500004,
+            "input": 1864,
+            "output": 455,
+            "stopReason": "toolUse",
+            "promptHash": "1353222918630d69d5e1fb46e2ca5bf786b981f0317aebe03b22262e81d40d86"
+          },
+          {
+            "ms": 1821.1037500000093,
+            "input": 2331,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "5cae9e43172b5095e6f818eee107741c6d8bf6fb5496abe3287382f17b6531ec"
+          },
+          {
+            "ms": 2769.0769580000197,
+            "input": 2361,
+            "output": 29,
+            "stopReason": "stop",
+            "promptHash": "616f6c17ca2f3e1af0df3a21225363a213948fe1a900fb8f4d22419de53002ae"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.20245800004340708
+          },
+          {
+            "name": "read",
+            "ms": 0.1491249999962747
+          },
+          {
+            "name": "read",
+            "ms": 0.22233299998333678
+          },
+          {
+            "name": "write",
+            "ms": 0.5075410000281408
+          },
+          {
+            "name": "run_tests",
+            "ms": 57.71641699998872
+          }
+        ],
+        "repetition": 1
+      },
+      {
+        "task": "transpose",
+        "speculative": false,
+        "latencyMs": 0,
+        "wallMs": 19064.48199999996,
+        "passed": true,
+        "testsRun": 12,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2190.844792000018,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "4f5a3514c0f398d7b9d548f6c9a994819f23446e86767caabfe22714a5343698"
+          },
+          {
+            "ms": 3415.6299589999835,
+            "input": 441,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "d6653551d942c08450e66345f5957c333074eef6381a655275641aab979f2747"
+          },
+          {
+            "ms": 1993.6540829999722,
+            "input": 476,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "94ec9f3d320b7fab8c5c51692bb70787debbc68c37b9dbcbe26d15d3111300b4"
+          },
+          {
+            "ms": 7309.8528750000405,
+            "input": 1235,
+            "output": 202,
+            "stopReason": "toolUse",
+            "promptHash": "1ae407815e9f40b33e555246cae6a8a19f84025c0e3fe7297b1e94d2b0fa66dd"
+          },
+          {
+            "ms": 2088.5266659999616,
+            "input": 1449,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "2f305e51e94160e9d830aee87b2f80bc2d29951b64307d6977d3f6d6c975bc0f"
+          },
+          {
+            "ms": 2007.0379579999717,
+            "input": 1479,
+            "output": 24,
+            "stopReason": "stop",
+            "promptHash": "8906ef6703da7cf5fe1dcf17929c8a2718383072c8c564e572caf706fee88d07"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.29962499998509884
+          },
+          {
+            "name": "read",
+            "ms": 0.14050000003771856
+          },
+          {
+            "name": "read",
+            "ms": 0.14845799998147413
+          },
+          {
+            "name": "write",
+            "ms": 0.5654160000267439
+          },
+          {
+            "name": "run_tests",
+            "ms": 56.76095899997745
+          }
+        ],
+        "repetition": 1
+      },
+      {
+        "task": "transpose",
+        "speculative": true,
+        "latencyMs": 0,
+        "wallMs": 21688.58720800001,
+        "passed": true,
+        "testsRun": 12,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2374.4895419999957,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "831eeef957fb377f7f711a26b3837688e51add514ff54835fd1fce468fd5c3cf"
+          },
+          {
+            "ms": 2351.718292000005,
+            "input": 441,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "ce5d9c1c68544f4000bbd59f34a5a151c1896e329b10b3dd3e734e8c65bd19ec"
+          },
+          {
+            "ms": 2088.9535419999156,
+            "input": 476,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "bf1f0904212f6f67782aebfeeec56fd4e279416862bebee481d22e2b817cb297"
+          },
+          {
+            "ms": 6762.783707999974,
+            "input": 1235,
+            "output": 195,
+            "stopReason": "toolUse",
+            "promptHash": "a958de47f98fc64b95fd9c55ee398d018414320b06208bdb4f6ce11eb9743514"
+          },
+          {
+            "ms": 2205.8527079999913,
+            "input": 1442,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "82243ebeda05f0d71272f61bb244fc0869a816743c796d623a434c9f4b9fd7a7"
+          },
+          {
+            "ms": 5902.508375000092,
+            "input": 320,
+            "output": 25,
+            "stopReason": "stop",
+            "promptHash": "f027b8735748cc327e939eb4a563460c0e33e3f6e191a2a5adbe6b274193dc8a"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_eXL7CYbg8VcHt8ueS9DzAnzr|fc_091fa841c2a75e0b016ac6fea223a087d0aa5f2a2903325a55",
+            "status": "accepted",
+            "headStartMs": 63.56670799991116,
+            "generationMs": 5902,
+            "usage": {
+              "input": 320,
+              "output": 25,
+              "cacheRead": 1152,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 1497,
+              "cost": {
+                "input": 0.0006399999999999999,
+                "output": 0.00025,
+                "cacheRead": 0.00023040000000000002,
+                "cacheWrite": 0,
+                "total": 0.0011204
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.29845800006296486
+          },
+          {
+            "name": "read",
+            "ms": 0.14270800002850592
+          },
+          {
+            "name": "read",
+            "ms": 0.14429199998266995
+          },
+          {
+            "name": "write",
+            "ms": 0.4892499999841675
+          },
+          {
+            "name": "run_tests",
+            "ms": 63.78125
+          }
+        ],
+        "repetition": 1
+      },
+      {
+        "task": "forth",
+        "speculative": true,
+        "latencyMs": 0,
+        "wallMs": 30416.95529199997,
+        "passed": true,
+        "testsRun": 54,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 3247.990957999951,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "09dae983e384fc642739c4de96fcfe9f96497bd6840efa31c74aa534f683b96d"
+          },
+          {
+            "ms": 3297.341916999896,
+            "input": 440,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "51f60f22c7bd2e621347ed022636a868d7634565e827e50b48b544d29977782f"
+          },
+          {
+            "ms": 2451.18283299997,
+            "input": 486,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "dd62604c5a14e912dc204d083e800ca72b77d7233818c73fd1e004673f5b5361"
+          },
+          {
+            "ms": 16081.097375000012,
+            "input": 3222,
+            "output": 776,
+            "stopReason": "toolUse",
+            "promptHash": "ebaf835dba4c1e00791f6ea877e941976be285fdb13c1ca4714013ec63bb2e94"
+          },
+          {
+            "ms": 2009.2603329999838,
+            "input": 4010,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "0174b84001a7f7850453a80ec8fc896f1450823c18f3a87998532539ed0d99f8"
+          },
+          {
+            "ms": 3327.9915409999667,
+            "input": 4040,
+            "output": 35,
+            "stopReason": "stop",
+            "promptHash": "2e860166153640b8a29a7af511ce6468b7c4df111705090abfbf9145c7c6875f"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_CCf1kE7JnwHGsXqDoQyl9VYD|fc_0485a394d4d43da3016ac6fec345dc87d0bf4e4223f96266c4",
+            "status": "accepted",
+            "headStartMs": 53.20708399999421,
+            "generationMs": 3328,
+            "usage": {
+              "input": 4040,
+              "output": 35,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 4075,
+              "cost": {
+                "input": 0.00808,
+                "output": 0.00035000000000000005,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.00843
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.3040000000037253
+          },
+          {
+            "name": "read",
+            "ms": 0.14895900001283735
+          },
+          {
+            "name": "read",
+            "ms": 0.14650000003166497
+          },
+          {
+            "name": "write",
+            "ms": 0.3641659999266267
+          },
+          {
+            "name": "run_tests",
+            "ms": 53.404166999971494
+          }
+        ],
+        "repetition": 1
+      },
+      {
+        "task": "forth",
+        "speculative": false,
+        "latencyMs": 0,
+        "wallMs": 30034.22179099999,
+        "passed": true,
+        "testsRun": 54,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2872.9087500000605,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "8b561b6ea584d2218fa8c8a0cd55eb6a755cac9ed477f994cea98c6073242130"
+          },
+          {
+            "ms": 3157.261250000098,
+            "input": 440,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "aab70c67b263e0c0fba4d5349c57dd59d57a0377b9cc303454e2d9233c92a7fd"
+          },
+          {
+            "ms": 2116.970457999967,
+            "input": 486,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "c7972a6e237043fcfc17294ccc55167a7eea7af3e59eab96478282ce766b480e"
+          },
+          {
+            "ms": 16522.38970900001,
+            "input": 3222,
+            "output": 816,
+            "stopReason": "toolUse",
+            "promptHash": "d4174fa24b25dcf0c3a76a8fabce2ea8f6279ee8d52fa41b79b6922c14413d59"
+          },
+          {
+            "ms": 2509.0943330000155,
+            "input": 978,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "ebaa9e3f1d79fad91b3ae648b33ddc7eb3dcb298eb1070a23f7751d46353174f"
+          },
+          {
+            "ms": 2774.8739160000114,
+            "input": 4080,
+            "output": 36,
+            "stopReason": "stop",
+            "promptHash": "6db346087248b2fd11f1d50ec764ed2ed4eff3cf61dd9b97a4ab8272dc7d1828"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.2615830000722781
+          },
+          {
+            "name": "read",
+            "ms": 0.20787499996367842
+          },
+          {
+            "name": "read",
+            "ms": 0.13395799999125302
+          },
+          {
+            "name": "write",
+            "ms": 0.34295799990650266
+          },
+          {
+            "name": "run_tests",
+            "ms": 78.73433399992064
+          }
+        ],
+        "repetition": 1
+      },
+      {
+        "task": "bowling",
+        "speculative": false,
+        "latencyMs": 0,
+        "wallMs": 31163.18200000003,
+        "passed": true,
+        "testsRun": 31,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2262.6910830000415,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "045d96c040a54ed9d9e6b8b15be5db5bf3940be776b9ba551f77b5e35a37f7f2"
+          },
+          {
+            "ms": 2370.6565829999745,
+            "input": 775,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "f8b62453f04b87bbb2011526a3bc26294f3ffe58cdee22e3e520d12eeb59e92c"
+          },
+          {
+            "ms": 2174.4780420000898,
+            "input": 836,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "daae2bbc5547fc1319b8eea2cb8c250bd6c53273b0b884fab1a51a8fe3c11475"
+          },
+          {
+            "ms": 17395.595458000083,
+            "input": 4028,
+            "output": 855,
+            "stopReason": "toolUse",
+            "promptHash": "647241bdcfd18dc1919c15b1b066839b63a9328499df47a3c653d5a6a7ecf736"
+          },
+          {
+            "ms": 2439.8931250000605,
+            "input": 4895,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "55b74b2f965b6ddd9589b2ebc62e23b6b8890e4c704ee98a0f45764e2ac997be"
+          },
+          {
+            "ms": 4361.5309170000255,
+            "input": 4925,
+            "output": 27,
+            "stopReason": "stop",
+            "promptHash": "1e01849d53fa66a220e8ab94919138323f4ebe5c36d78c65be38ecbfa3a4e634"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.4115839999867603
+          },
+          {
+            "name": "read",
+            "ms": 0.2902499999618158
+          },
+          {
+            "name": "read",
+            "ms": 0.14358399994671345
+          },
+          {
+            "name": "write",
+            "ms": 0.9312500000232831
+          },
+          {
+            "name": "run_tests",
+            "ms": 154.9534579999745
+          }
+        ],
+        "repetition": 1
+      },
+      {
+        "task": "bowling",
+        "speculative": true,
+        "latencyMs": 0,
+        "wallMs": 30328.626083000097,
+        "passed": true,
+        "testsRun": 31,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 1809.1087919999845,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "9761a3de7724c953456243e31b7cad42eb83b43deeef84bb1d5dbf55d62956d2"
+          },
+          {
+            "ms": 2118.548415999976,
+            "input": 775,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "a8c2f04e73285dab82f441fd266a25f95b1ca4d541ca6cfed58a4d3d1569b79e"
+          },
+          {
+            "ms": 1934.2710420000367,
+            "input": 836,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "f4a5f560010a9adfc2ba4c7e97b7da0005bdfbf7aeddd8735d604fb666997a7a"
+          },
+          {
+            "ms": 19059.89770900004,
+            "input": 4028,
+            "output": 867,
+            "stopReason": "toolUse",
+            "promptHash": "a0829cf569ca44cb71376af524ad1a5fa2f652062aa093063eac6c9f1dce461b"
+          },
+          {
+            "ms": 2604.271791999927,
+            "input": 4907,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "37db5e9bc9d5a9d6bfb1782b1414b1a7b2868256605733887edad4ce065bd490"
+          },
+          {
+            "ms": 2799.997583999997,
+            "input": 4937,
+            "output": 33,
+            "stopReason": "stop",
+            "promptHash": "fde539aac1a32b9f9988fa7d1fc8ad9f6e79d4ba715aa4077cf98fa9a7bd2c2b"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_ouXP3ohY9HLcBa8QzuV7ru5L|fc_02319e34dd133416016ac6ff1f20f087d0a778efc712e6e64b",
+            "status": "accepted",
+            "headStartMs": 48.41533300001174,
+            "generationMs": 2800,
+            "usage": {
+              "input": 4937,
+              "output": 33,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 4970,
+              "cost": {
+                "input": 0.009873999999999999,
+                "output": 0.00033000000000000005,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.010204
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.40874999994412065
+          },
+          {
+            "name": "read",
+            "ms": 0.28095799998845905
+          },
+          {
+            "name": "read",
+            "ms": 0.1422499999171123
+          },
+          {
+            "name": "write",
+            "ms": 0.30054200009908527
+          },
+          {
+            "name": "run_tests",
+            "ms": 48.62854199996218
+          }
+        ],
+        "repetition": 1
+      },
+      {
+        "task": "wordy",
+        "speculative": false,
+        "latencyMs": 2000,
+        "wallMs": 44134.645625000005,
+        "passed": true,
+        "testsRun": 25,
+        "turns": 8,
+        "requests": [
+          {
+            "ms": 1816.0272079999559,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "91310b253184f05805626b64e825a38151d1d4359773473de97e4175a731b3b1"
+          },
+          {
+            "ms": 2222.4621669999324,
+            "input": 505,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "39a81c264412eefd4278015f4201e84f1529f04fdafa3cc1b344a018336c96d4"
+          },
+          {
+            "ms": 2133.7428749999963,
+            "input": 541,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "e479dfd2f9259925534bfa069f3372c6d2bc2d853b45b011f63ea4f4514dff02"
+          },
+          {
+            "ms": 12789.798666000017,
+            "input": 105,
+            "output": 589,
+            "stopReason": "toolUse",
+            "promptHash": "ff354065d925c568e1dc720db18998ec62050d041ee3cb7853c393543060cb12"
+          },
+          {
+            "ms": 3262.2005000000354,
+            "input": 2242,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "5db4247c00a84b4d71bbeb128542aeb705fb3e417bbeef4cc3d2834e60dbebe8"
+          },
+          {
+            "ms": 10157.145958000096,
+            "input": 2435,
+            "output": 448,
+            "stopReason": "toolUse",
+            "promptHash": "9b9327ec9fd89fa51056dc8ea9deb9c3fd0e828b7bc1a6923c98c40f4cb15873"
+          },
+          {
+            "ms": 5225.715124999988,
+            "input": 1359,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "8f9d6fb49e436c89d255b25401b6e66a6a901feeaffbf8b434e74d7d1fdce177"
+          },
+          {
+            "ms": 2423.7377919999417,
+            "input": 1389,
+            "output": 32,
+            "stopReason": "stop",
+            "promptHash": "fdc64a661d4e89729d5bb038947aa91b1ad98f395d8462ab942113a843d71284"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.2355410000309348
+          },
+          {
+            "name": "read",
+            "ms": 0.1801670000422746
+          },
+          {
+            "name": "read",
+            "ms": 0.21450000000186265
+          },
+          {
+            "name": "write",
+            "ms": 0.5709999999962747
+          },
+          {
+            "name": "run_tests",
+            "ms": 2053.288749999949
+          },
+          {
+            "name": "write",
+            "ms": 0.42300000006798655
+          },
+          {
+            "name": "run_tests",
+            "ms": 2047.3326670000097
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "wordy",
+        "speculative": true,
+        "latencyMs": 2000,
+        "wallMs": 44666.80087499996,
+        "passed": true,
+        "testsRun": 25,
+        "turns": 8,
+        "requests": [
+          {
+            "ms": 2656.8110840000445,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "7d6cba7dfacc0417331d61589f71356abeb8b7016e6fbc16728f32d5a35b130e"
+          },
+          {
+            "ms": 2333.2542910000775,
+            "input": 505,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "5a4f980e6954204ff3549425f766321533f16cc12637fec8a9df0bfd98247ba2"
+          },
+          {
+            "ms": 2511.9365420000395,
+            "input": 541,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "7d757b0a2d29e5255d693424c9b39cf55f8f0bdfbf85f02e472af29e26f36425"
+          },
+          {
+            "ms": 13035.913124999963,
+            "input": 1641,
+            "output": 551,
+            "stopReason": "toolUse",
+            "promptHash": "3194411a3c342e10ee0654c48ace4cb1ceb43e9bbc014f8f57e799b78ff99e6c"
+          },
+          {
+            "ms": 5747.326583000016,
+            "input": 668,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "015483f5a24f016e22e73549f2bfa785a8b823f08f25481598c213df36257ee7"
+          },
+          {
+            "ms": 2068.5702919999603,
+            "input": 0,
+            "output": 0,
+            "stopReason": "aborted",
+            "promptHash": "f2c7f1eb561027c46ef819c0d1332001163ed8e769d32f729e823e597815a696"
+          },
+          {
+            "ms": 10884.244166000048,
+            "input": 2397,
+            "output": 467,
+            "stopReason": "toolUse",
+            "promptHash": "ad80391b04caca0619cecea3aa53eabd094663b0143401d0ed74bd43fb2964f1"
+          },
+          {
+            "ms": 2774.058250000002,
+            "input": 2876,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "eceb910312b654cb412e8c021474d468c6807dce9581fdf2b46e204b0819ed3d"
+          },
+          {
+            "ms": 2651.5629160000244,
+            "input": 2906,
+            "output": 36,
+            "stopReason": "stop",
+            "promptHash": "90ee96f12ca0ff6c4bee17366d6b35b510de3ec13d225ae92a85836e2cc4b6d9"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_k1OyE5wy93G9HaTdzS5Tq1Bl|fc_0c9eec87e2f6d42e016ac6ff68c6c487d0a2e2afb08bb4c0e3",
+            "status": "mismatch",
+            "headStartMs": 2067.28216599999
+          },
+          {
+            "toolCallId": "call_0Gg1qyATji3i6hI3bktyQPrZ|fc_0c9eec87e2f6d42e016ac6ff783c4087d0b22642ca7c302392",
+            "status": "accepted",
+            "headStartMs": 2073.1056249999674,
+            "generationMs": 2651,
+            "usage": {
+              "input": 2906,
+              "output": 36,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 2942,
+              "cost": {
+                "input": 0.0058119999999999995,
+                "output": 0.00036,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.0061719999999999995
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.3364169999258593
+          },
+          {
+            "name": "read",
+            "ms": 0.15541600005235523
+          },
+          {
+            "name": "read",
+            "ms": 0.2575829999987036
+          },
+          {
+            "name": "write",
+            "ms": 0.3733749999664724
+          },
+          {
+            "name": "run_tests",
+            "ms": 2067.512708000024
+          },
+          {
+            "name": "write",
+            "ms": 0.2996670000720769
+          },
+          {
+            "name": "run_tests",
+            "ms": 2073.2586669999873
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "grade-school",
+        "speculative": true,
+        "latencyMs": 2000,
+        "wallMs": 20659.896667000023,
+        "passed": true,
+        "testsRun": 20,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2114.04770799994,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "1d063d21a2d8a1ffab6284d5f67d6d227cd0d55e529c77dd7503be8546df7ec7"
+          },
+          {
+            "ms": 2204.6694159999024,
+            "input": 497,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "0d4441188e237400c2c8d24d09db0f3fa2a98050c24568ffabf93ac33bb90afd"
+          },
+          {
+            "ms": 1996.5817919999827,
+            "input": 579,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "e4cb2c2eab1c328bb5265b094ea246eea4ffd82c2e3abc1bfb02f0eadab53cea"
+          },
+          {
+            "ms": 6287.4078750000335,
+            "input": 201,
+            "output": 214,
+            "stopReason": "toolUse",
+            "promptHash": "0c899bf4d8775d970f729bfcd2779095ff5d69159c6aab2be0bbeffd2c36224c"
+          },
+          {
+            "ms": 2795.97258400009,
+            "input": 2475,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "3d6a94f16f5404c4bd804203645f175880f867d45e78539acb49e4538f40591a"
+          },
+          {
+            "ms": 5259.149582999991,
+            "input": 2505,
+            "output": 31,
+            "stopReason": "stop",
+            "promptHash": "c997e6c34b85f0ace16c87346b05eb04488d5a65cca2603c5a46b01dcb793ea0"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_NtuMRmh9Fh98bn4007ygVXAe|fc_0f10098466d2707c016ac6ff89fdf087d0a9fce2c3ee380224",
+            "status": "accepted",
+            "headStartMs": 2070.007709000027,
+            "generationMs": 5259,
+            "usage": {
+              "input": 2505,
+              "output": 31,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 2536,
+              "cost": {
+                "input": 0.00501,
+                "output": 0.00031,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.00532
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.23591699998360127
+          },
+          {
+            "name": "read",
+            "ms": 0.16141699999570847
+          },
+          {
+            "name": "read",
+            "ms": 0.19600000011269003
+          },
+          {
+            "name": "write",
+            "ms": 0.3176250000251457
+          },
+          {
+            "name": "run_tests",
+            "ms": 2070.1752089998918
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "grade-school",
+        "speculative": false,
+        "latencyMs": 2000,
+        "wallMs": 26777.059917000006,
+        "passed": true,
+        "testsRun": 20,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 4384.645791999996,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "c70282c44a23af2feb26451a6725f04bbc5a40b8bab3d01d34010ad934ffa755"
+          },
+          {
+            "ms": 4972.01791699999,
+            "input": 497,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "245f118f34f5bf67c77d6f75af779721edaeb986e567f186f65e81f497e65be3"
+          },
+          {
+            "ms": 3073.01004199998,
+            "input": 579,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "39abe094fd3103b9c0540076c9fd67cf69fd7b4bc9ff53f93d40ee3e9ab4a342"
+          },
+          {
+            "ms": 7399.479458000045,
+            "input": 2249,
+            "output": 197,
+            "stopReason": "toolUse",
+            "promptHash": "95b24b7ad02c70cefc3a900a7f8675f6244d3d0be65375dd2b71e9cd37869f1f"
+          },
+          {
+            "ms": 1829.857166999951,
+            "input": 2458,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "6e9d503de9146ba910856bc0b9cf398cb76af74bd4e76a6014ac31023af72a30"
+          },
+          {
+            "ms": 3041.88733399997,
+            "input": 184,
+            "output": 32,
+            "stopReason": "stop",
+            "promptHash": "e4ebd6eb5a2b086e75a26f4c028998322dfbdd625fd6e7a3341b0b5c4be8addb"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.31274999992456287
+          },
+          {
+            "name": "read",
+            "ms": 0.1553330000024289
+          },
+          {
+            "name": "read",
+            "ms": 0.14745899999979883
+          },
+          {
+            "name": "write",
+            "ms": 0.5769169999985024
+          },
+          {
+            "name": "run_tests",
+            "ms": 2073.861042000004
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "phone-number",
+        "speculative": false,
+        "latencyMs": 2000,
+        "wallMs": 26462.053375000018,
+        "passed": true,
+        "testsRun": 21,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2259.313790999935,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "d459b7e1b0c649bcf55a46400b426ca560ac51094b7995027282d61a3fca0f56"
+          },
+          {
+            "ms": 2505.5995419999817,
+            "input": 536,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "ab948cd64dac9c7e186973e50e7c886b05e82cc18507cc5f9425890a9df568f5"
+          },
+          {
+            "ms": 2273.3382920000004,
+            "input": 581,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "d57b61d7ace6024cd8fda3c8d61ecf92572396b789b01f4cf42bd2449b35b6f4"
+          },
+          {
+            "ms": 12246.31704200001,
+            "input": 1864,
+            "output": 480,
+            "stopReason": "toolUse",
+            "promptHash": "c2d11ad963bbdc13ac290288eded1f383c5feb86827801f6a477b5968f0b1420"
+          },
+          {
+            "ms": 2275.163541999995,
+            "input": 2356,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "93fa4961169782e06285b85d98e58638d59826df2f465c682029169d9c1c4b55"
+          },
+          {
+            "ms": 2837.6690830000443,
+            "input": 2386,
+            "output": 25,
+            "stopReason": "stop",
+            "promptHash": "d9d1c9a9975030303ff2b16e0856e0882a0ad62b9b19dcd14f0751d97f0badec"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.2556250001071021
+          },
+          {
+            "name": "read",
+            "ms": 0.33529199997428805
+          },
+          {
+            "name": "read",
+            "ms": 0.9675829999614507
+          },
+          {
+            "name": "write",
+            "ms": 0.3579579999204725
+          },
+          {
+            "name": "run_tests",
+            "ms": 2061.5472079999745
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "phone-number",
+        "speculative": true,
+        "latencyMs": 2000,
+        "wallMs": 27488.821166999987,
+        "passed": true,
+        "testsRun": 21,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 3012.505540999933,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "a22dac488a6303a9ba7df3794a1238b5cde353c671d909df1e565e63fb1fc4be"
+          },
+          {
+            "ms": 2048.9043330000713,
+            "input": 536,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "689b6903928b18eafa1288bae7692047da5a8a228b7b256a42c25bf839093c30"
+          },
+          {
+            "ms": 3004.788041999913,
+            "input": 581,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "93776819d707717be77fca8e43fc966166882f4f1e8b4d1a63c80e5282fb1ffd"
+          },
+          {
+            "ms": 13864.673375000013,
+            "input": 1864,
+            "output": 473,
+            "stopReason": "toolUse",
+            "promptHash": "8a89154e132bd76a903194f590b6af651f5929eb9384d7fafc7df2fe66fee3b1"
+          },
+          {
+            "ms": 2407.0377919999883,
+            "input": 2349,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "7acec2de2984acf1e18ee8216a614deb0d687d0596b15227ea7396f4e9ae0506"
+          },
+          {
+            "ms": 3148.353333999985,
+            "input": 2379,
+            "output": 30,
+            "stopReason": "stop",
+            "promptHash": "a0e2d27d21cfb58fabe175b0e43d9ba798a6ad6c77719fc434c8d05a500e8b55"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_qrGLw6bQHZASnRHyYjHLnX2V|fc_0fa194698d32358e016ac6ffdd9f2487d09087daaecd536623",
+            "status": "accepted",
+            "headStartMs": 2063.0481669999426,
+            "generationMs": 3148,
+            "usage": {
+              "input": 2379,
+              "output": 30,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 2409,
+              "cost": {
+                "input": 0.004758,
+                "output": 0.00030000000000000003,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.005058
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.38145900005474687
+          },
+          {
+            "name": "read",
+            "ms": 0.15479099994990975
+          },
+          {
+            "name": "read",
+            "ms": 0.20129100000485778
+          },
+          {
+            "name": "write",
+            "ms": 0.39712500001769513
+          },
+          {
+            "name": "run_tests",
+            "ms": 2063.3057920000283
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "transpose",
+        "speculative": true,
+        "latencyMs": 2000,
+        "wallMs": 20177.730542000034,
+        "passed": true,
+        "testsRun": 12,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 3912.9944999999134,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "58021a5ac24198114a7494f99a58e2226cc3b8ce80945b36716920330858f064"
+          },
+          {
+            "ms": 2144.8564169999445,
+            "input": 441,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "f50a5052a848b2ff2452ffb816e250e3f5e31136293592785fa2a9bbf4d00654"
+          },
+          {
+            "ms": 3417.880833000061,
+            "input": 476,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "6d4811d5c2253b54bbcb8e4261b662927fe1e39529c7cfb6c4c6601f9d7b55fd"
+          },
+          {
+            "ms": 5824.359791999916,
+            "input": 1235,
+            "output": 188,
+            "stopReason": "toolUse",
+            "promptHash": "00f723627114dcbf0d4a9313c0a5673dace04a1ce49c63448262c522d1e903b5"
+          },
+          {
+            "ms": 2793.5634169999976,
+            "input": 1435,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "2152fce80ea40a9adc7024a5330dd104baf67b8ca464c514671c100be555718b"
+          },
+          {
+            "ms": 1972.970958000049,
+            "input": 313,
+            "output": 30,
+            "stopReason": "stop",
+            "promptHash": "eec66421def475c9f31171ae6604e98b6a586db1d8dafee481565ae6586136fa"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_amvNafqnaObq1YTuhlLPMTs9|fc_05dc020e974ea01d016ac6fff2f63487d0ae9568a0727adac1",
+            "status": "accepted",
+            "headStartMs": 2080.409875000012,
+            "generationMs": 1973,
+            "usage": {
+              "input": 313,
+              "output": 30,
+              "cacheRead": 1152,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 1495,
+              "cost": {
+                "input": 0.0006259999999999999,
+                "output": 0.00030000000000000003,
+                "cacheRead": 0.00023040000000000002,
+                "cacheWrite": 0,
+                "total": 0.0011564
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.47079199994914234
+          },
+          {
+            "name": "read",
+            "ms": 0.8828330000396818
+          },
+          {
+            "name": "read",
+            "ms": 0.3979579999577254
+          },
+          {
+            "name": "write",
+            "ms": 0.4552090000361204
+          },
+          {
+            "name": "run_tests",
+            "ms": 2080.784875000012
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "transpose",
+        "speculative": false,
+        "latencyMs": 2000,
+        "wallMs": 21789.385084000067,
+        "passed": true,
+        "testsRun": 12,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2203.6164160000626,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "ac2d47f2de7cfbf508d7f0fc109214d9ad7e50b3823f49c0188dd802efaa8f1a"
+          },
+          {
+            "ms": 1968.7069159999955,
+            "input": 441,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "2fd5096beb1b010e974cece61de47b98f169f0f2a3234f5ca6ee0d7afca0a081"
+          },
+          {
+            "ms": 6281.030333000002,
+            "input": 476,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "3098f05f6bf2b6d3b3f5435fc592bad795d262ba3fb7a48711cd8ff526b13833"
+          },
+          {
+            "ms": 5022.940625000047,
+            "input": 1235,
+            "output": 192,
+            "stopReason": "toolUse",
+            "promptHash": "2baa56ca69a0406487d41b80c5ceb523df1ae2d6cebc9da88748a7c03b13aa97"
+          },
+          {
+            "ms": 1856.3338340000482,
+            "input": 1439,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "e94e8df2e30fdd9b26cb03da9f284e8ad422135871258489a0bb002a7c1a03ed"
+          },
+          {
+            "ms": 2289.017416000017,
+            "input": 317,
+            "output": 28,
+            "stopReason": "stop",
+            "promptHash": "18355fe54b60d15fb402b8d8baf5388ac3ab06163ebf63a4e3879cf6409ed979"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.22200000006705523
+          },
+          {
+            "name": "read",
+            "ms": 0.14570799993816763
+          },
+          {
+            "name": "read",
+            "ms": 0.1848330000648275
+          },
+          {
+            "name": "write",
+            "ms": 0.6537920000264421
+          },
+          {
+            "name": "run_tests",
+            "ms": 2164.955249999999
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "forth",
+        "speculative": false,
+        "latencyMs": 2000,
+        "wallMs": 35369.978999999934,
+        "passed": true,
+        "testsRun": 54,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 1977.5260830000043,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "1112c9000d94e8f0ecd8ad027a4aa66efd278657c79ba1c292db73b1bbccfa11"
+          },
+          {
+            "ms": 2873.7683330000145,
+            "input": 440,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "7f93e79ba3eb61952b0d25e5c05c0345d0e31b954dd2b6912acab10b87e81cb2"
+          },
+          {
+            "ms": 2536.7845830000006,
+            "input": 486,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "4d257e8a2014fee205f062cc2d05f9288a323d87bb3f257f84e73a074862280b"
+          },
+          {
+            "ms": 17343.06441699993,
+            "input": 150,
+            "output": 768,
+            "stopReason": "toolUse",
+            "promptHash": "f5830d1a6090786394f620d1d49c418568c31fc69445c6cb0e7f242842b037d3"
+          },
+          {
+            "ms": 2160.9744580000406,
+            "input": 4002,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "335e642dad71f87410045741b5c856f6707f1027a1f50f27c0653d1036afacc7"
+          },
+          {
+            "ms": 6384.525249999948,
+            "input": 960,
+            "output": 35,
+            "stopReason": "stop",
+            "promptHash": "a6275f3d39bc57627ae647702e4ecfa65e52f532f153d183560e7218f3a9a8c5"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.3909579999744892
+          },
+          {
+            "name": "read",
+            "ms": 0.5563340000808239
+          },
+          {
+            "name": "read",
+            "ms": 0.49504199996590614
+          },
+          {
+            "name": "write",
+            "ms": 1.0397919999668375
+          },
+          {
+            "name": "run_tests",
+            "ms": 2089.28437499993
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "forth",
+        "speculative": true,
+        "latencyMs": 2000,
+        "wallMs": 30190.145625000005,
+        "passed": true,
+        "testsRun": 54,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2152.570165999932,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "a1e738048cc5819144e73be4c45a9aca7a60ef6d9ac61573a9016e4962df1291"
+          },
+          {
+            "ms": 1986.2218750000466,
+            "input": 440,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "e6d84f9ab02029b15dd0e67a8ae961b5a7ecedd148b16807ae5894e6dc573f1b"
+          },
+          {
+            "ms": 1718.580958000035,
+            "input": 486,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "cda17115bef0f383789d7a1a3bf888a1746cec30af0e7cb1c3dd7c1710057304"
+          },
+          {
+            "ms": 19242.527416999917,
+            "input": 3222,
+            "output": 931,
+            "stopReason": "toolUse",
+            "promptHash": "994fa91de6419017bc7ffede004ba848032b9cb2a5aee6edb606af827796acfa"
+          },
+          {
+            "ms": 2492.1428750000196,
+            "input": 4165,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "c980c28eff101b073422f8aa13bdc73cc482e7aa43b8fbd7b0c8acce12850972"
+          },
+          {
+            "ms": 2595.2060000000056,
+            "input": 1123,
+            "output": 36,
+            "stopReason": "stop",
+            "promptHash": "f390a1871fb0c1c9e973e9f97aa2aca91efb114a7476af967238f4836bc1aa0a"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_JmaJIR9SohNWguq9nOfFtLUh|fc_0273dcd756404816016ac7004a060887d09483c8c324c8fe3d",
+            "status": "accepted",
+            "headStartMs": 2072.8691249999683,
+            "generationMs": 2595,
+            "usage": {
+              "input": 1123,
+              "output": 36,
+              "cacheRead": 3072,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 4231,
+              "cost": {
+                "input": 0.0022459999999999997,
+                "output": 0.00036,
+                "cacheRead": 0.0006144000000000001,
+                "cacheWrite": 0,
+                "total": 0.0032204
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.41308299999218434
+          },
+          {
+            "name": "read",
+            "ms": 0.17625000001862645
+          },
+          {
+            "name": "read",
+            "ms": 0.14666600001510233
+          },
+          {
+            "name": "write",
+            "ms": 0.7021249999525025
+          },
+          {
+            "name": "run_tests",
+            "ms": 2073.112749999971
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "bowling",
+        "speculative": true,
+        "latencyMs": 2000,
+        "wallMs": 32268.559666999965,
+        "passed": true,
+        "testsRun": 31,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 1989.347833000007,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "ac076cc1d856decc2848cd38a6153f329efabcbc20dd04c6b366444b5ba0558f"
+          },
+          {
+            "ms": 4111.610999999917,
+            "input": 775,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "47b7cee71ec027aaa72fa85205f48dc13f1b5874dfb71eefec3d68483b67ebd1"
+          },
+          {
+            "ms": 2175.050958000007,
+            "input": 836,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "ac4be2256819a2a276426cdd30d56253b8b00c062d50913b54444758ddc5596e"
+          },
+          {
+            "ms": 15053.359832999995,
+            "input": 4028,
+            "output": 734,
+            "stopReason": "toolUse",
+            "promptHash": "153805f9c0261050d9cbf455f1954ca3b96c0097352efb174904110fb9df270d"
+          },
+          {
+            "ms": 6327.935582999955,
+            "input": 4774,
+            "output": 79,
+            "stopReason": "toolUse",
+            "promptHash": "c3761c034899d42e6bbf9a7b8e241b11130ae3f5df2ec9e6336c3c8521ebe912"
+          },
+          {
+            "ms": 2608.793249999988,
+            "input": 1029,
+            "output": 33,
+            "stopReason": "stop",
+            "promptHash": "8b124a3e679f51b1b2ad4345e3822c88e6d69e91843e752cd553781390ab0be6"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_s6dLvcY9rVGyWevwASdhzroB|fc_0fc7f39d2aef01cf016ac7006a777887d0b24c9e8bcfdf12f0",
+            "status": "accepted",
+            "headStartMs": 2058.093125000014,
+            "generationMs": 2609,
+            "usage": {
+              "input": 1029,
+              "output": 33,
+              "cacheRead": 3840,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 4902,
+              "cost": {
+                "input": 0.002058,
+                "output": 0.00033000000000000005,
+                "cacheRead": 0.000768,
+                "cacheWrite": 0,
+                "total": 0.003156
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.36220899992622435
+          },
+          {
+            "name": "read",
+            "ms": 0.1675419999519363
+          },
+          {
+            "name": "read",
+            "ms": 0.17720899998676032
+          },
+          {
+            "name": "write",
+            "ms": 0.46516699995845556
+          },
+          {
+            "name": "run_tests",
+            "ms": 2058.3076669999864
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "bowling",
+        "speculative": false,
+        "latencyMs": 2000,
+        "wallMs": 10975.085707999999,
+        "passed": false,
+        "testsRun": 31,
+        "turns": 4,
+        "error": "Our servers are currently overloaded. Please try again later.",
+        "requests": [
+          {
+            "ms": 2785.074166999897,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "c362e8438d1b9b8831d89e4f24f3dc475a726670653dd81b43a20f22dc974e95"
+          },
+          {
+            "ms": 3980.8150000000605,
+            "input": 775,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "304e351b1dce98f361ebf64df3c224189afe1f9e130c98bbe8c19cf8986bb891"
+          },
+          {
+            "ms": 2204.483125000028,
+            "input": 836,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "bcde16077758b6c01a36b63b9178b59e40b8deb5742f498b927e9d622c69e391"
+          },
+          {
+            "ms": 2003.2619170000544,
+            "input": 0,
+            "output": 0,
+            "stopReason": "error",
+            "promptHash": "0a60ffcaa9ac18f88293ada1169d9e1a1cab8485ae7f19fb964954bf312c95c1"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.3831670000217855
+          },
+          {
+            "name": "read",
+            "ms": 0.22770799999125302
+          },
+          {
+            "name": "read",
+            "ms": 0.13500000000931323
+          }
+        ],
+        "repetition": 0
+      }
+    ]
+  },
+  "gpt-6-sol-medium-chatgpt-delayed-retry": {
+    "protocol": {
+      "settings": {
+        "provider": "openai",
+        "model": "gpt-6-sol",
+        "reasoning": "medium",
+        "routing": "",
+        "latencyMs": 0,
+        "speculative": false,
+        "mismatchPolicy": "cancel",
+        "maxTurns": 16,
+        "timeoutMs": 300000
+      },
+      "auth": "chatgpt",
+      "sourceHashes": {
+        "packages/agent/src/speculation.ts": "c52dfae426e1d332c6d1b81deb2981f16fd3c6893bbec37dad5dd3e898cc283d",
+        "packages/agent/examples/speculative/runner.ts": "c770556c3899e995ef02aa44d96d619fa3e47aa3950d60e0096b422767a8ad55",
+        "packages/agent/examples/speculative/cli.ts": "e2ab7a94f4a0af35f65620f31a660bf1b0d52716577b1ae104bf584ac55f36f4"
+      },
+      "taskHashes": {
+        "wordy": "9d94efbc7be9e016efc15ecb9b18ed3bdd76a892651149e6d36cf3118e569f40",
+        "grade-school": "6da35a17199c8d995dfe39c874fb296513fdda6b7783a9ab589f0d5e51f4d6ee",
+        "phone-number": "6ba8d39584450eaa3df16275329efb63f5e41cd6a1f490da4e0675f6f745262b",
+        "transpose": "68f4c116ba58dee912091e783572ec714c1a6845228895f445487a8f1611505c",
+        "forth": "074f1047633c248a88990569ee52cde91ace66a2a2928621e2609f7effbe58df",
+        "bowling": "fdff65867c389bc89eec761b5910fd0778ed3efe3fae3cc9d4b8170025ad1ac9"
+      },
+      "tasks": [
+        "wordy",
+        "grade-school",
+        "phone-number",
+        "transpose",
+        "forth",
+        "bowling"
+      ],
+      "repeats": 2,
+      "latencies": [
+        2000
+      ],
+      "datasetRevision": "7e0611e77b54e2dea774cdc0aa00cf9f7ed6144f",
+      "piRevision": "1cedd32724abfcb0915f76cc61b6827e2c16dbad",
+      "startedAt": "2026-10-08T02:31:40.971Z",
+      "design": "Paired, order-alternating, sequential runs; fresh task workspace and original tests; latency is injected only after real test execution in both arms; final grading outside timed region. Public tests, not held out. No provider fallback."
+    },
+    "results": [
+      {
+        "task": "wordy",
+        "speculative": false,
+        "latencyMs": 2000,
+        "wallMs": 33283.570292,
+        "passed": true,
+        "testsRun": 25,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2543.527666,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "8bc5df3bba19553358b8a9395f1ccad3fb888744b745ca91fba637d8ef7959cc"
+          },
+          {
+            "ms": 2961.8502919999996,
+            "input": 505,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "968572498feea1d4e0bb7c475a8fb1a7fe2dd72397e3fbfa2e5184334774b88d"
+          },
+          {
+            "ms": 3236.8971250000004,
+            "input": 541,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "19ce81fa068f11e53991c10936ebadd39798828f3c945f70bb2390fd9da87a09"
+          },
+          {
+            "ms": 15468.686916,
+            "input": 1641,
+            "output": 766,
+            "stopReason": "toolUse",
+            "promptHash": "1fc7d8f23f487a8741cc29f32ebf262c3d870a6db7ecd7854f49c3c91f9ce2a2"
+          },
+          {
+            "ms": 2212.8822500000024,
+            "input": 2419,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "324aa8f05e1f2a0baa420fce64c23a7673f40bd6b6d63f4df5740d92b9287025"
+          },
+          {
+            "ms": 4796.114541999999,
+            "input": 2449,
+            "output": 97,
+            "stopReason": "stop",
+            "promptHash": "8d74c9260e09415d3343d40303d8e7cfcf31b5052b5179a829b5e208952a0e21"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 2.202541999999994
+          },
+          {
+            "name": "read",
+            "ms": 0.2766249999995125
+          },
+          {
+            "name": "read",
+            "ms": 0.24795799999992596
+          },
+          {
+            "name": "write",
+            "ms": 1.0128750000003492
+          },
+          {
+            "name": "run_tests",
+            "ms": 2057.400125
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "wordy",
+        "speculative": true,
+        "latencyMs": 2000,
+        "wallMs": 52530.63375,
+        "passed": true,
+        "testsRun": 25,
+        "turns": 8,
+        "requests": [
+          {
+            "ms": 4393.321416999999,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "45e308033052d13a3fc0bc1bee290b3fa0309e0db2963d0e0d03dff975b3d2f1"
+          },
+          {
+            "ms": 2074.585834000005,
+            "input": 505,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "a0c6556b76997edc363a0b980852c111c5fd9404cd5ad6f7adf5a31c26bc061c"
+          },
+          {
+            "ms": 4560.131957999998,
+            "input": 541,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "17337e05ed54137d9486fcb4d54631f6c65174d0d166c6ac1c40482c0b532b14"
+          },
+          {
+            "ms": 14927.3145,
+            "input": 1641,
+            "output": 658,
+            "stopReason": "toolUse",
+            "promptHash": "2c76ec6e2ba0d01d72d3f7c17174108abb75447644af260f1e82efd5dc0d3040"
+          },
+          {
+            "ms": 2059.9539589999986,
+            "input": 775,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "9f70c17af354acc5bf11098dbb286e62016581969a4e64a916ffb95e2e37a348"
+          },
+          {
+            "ms": 2053.165792,
+            "input": 0,
+            "output": 0,
+            "stopReason": "aborted",
+            "promptHash": "545269a07b243beb02b5473f3ea53c32551f755ec48b6deb9b3c79f259c874e3"
+          },
+          {
+            "ms": 10549.774833000003,
+            "input": 328,
+            "output": 484,
+            "stopReason": "toolUse",
+            "promptHash": "875155534c9a9ec45b42f73aa4451d1707e07226f8d8c44ae0de0725d42914da"
+          },
+          {
+            "ms": 3004.340167000002,
+            "input": 3000,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "e8dee2650907f40d2fca2bb59c5c0bd5e5dc1ae116ea3cee2af3bcf9dcc59333"
+          },
+          {
+            "ms": 8897.60841700001,
+            "input": 3030,
+            "output": 31,
+            "stopReason": "stop",
+            "promptHash": "403ef5b60dd4f4879d133812bf7ed3c77ed50624d0fd19e0c7e753e0073d177f"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_z7wN7a6fwhZblBJohcr9bM80|fc_035815d13894f1ab016ac700ca1d0487d0a9736e097494284a",
+            "status": "mismatch",
+            "headStartMs": 2052.001167000002
+          },
+          {
+            "toolCallId": "call_61izV0ZlThXwn2b3AxpnDAc0|fc_035815d13894f1ab016ac700d9c03087d0a7bdd5b10c2d32ed",
+            "status": "accepted",
+            "headStartMs": 2322.7425000000076,
+            "generationMs": 8897,
+            "usage": {
+              "input": 3030,
+              "output": 31,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 3061,
+              "cost": {
+                "input": 0.006059999999999999,
+                "output": 0.00031,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.00637
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.47429099999862956
+          },
+          {
+            "name": "read",
+            "ms": 0.2170830000031856
+          },
+          {
+            "name": "read",
+            "ms": 0.2507919999989099
+          },
+          {
+            "name": "write",
+            "ms": 0.5878329999977723
+          },
+          {
+            "name": "run_tests",
+            "ms": 2058.008249999999
+          },
+          {
+            "name": "write",
+            "ms": 0.6597080000065034
+          },
+          {
+            "name": "run_tests",
+            "ms": 2322.9463749999995
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "grade-school",
+        "speculative": true,
+        "latencyMs": 2000,
+        "wallMs": 28405.006917000006,
+        "passed": true,
+        "testsRun": 20,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 1972.853958000007,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "fb948c36a147b8c6dd2d5c2bdca8dafbbcf0e22b86d643c73c1448ad43d33cfa"
+          },
+          {
+            "ms": 2423.076457999996,
+            "input": 497,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "d06279907378c18d25fcf8e97a832c0128dae4ce3e40e741283de689c51b4c42"
+          },
+          {
+            "ms": 3546.3527909999975,
+            "input": 579,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "f5a8e0bd79ccaaccab6174bc9d00956c0a1efdbdab6288c5aa520af8c619e262"
+          },
+          {
+            "ms": 14362.163832999999,
+            "input": 2249,
+            "output": 215,
+            "stopReason": "toolUse",
+            "promptHash": "1b273364361e896210846963fcb1a5b75071d17fd2f146469c05123aab94c682"
+          },
+          {
+            "ms": 2117.1909159999923,
+            "input": 428,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "36bbc02b4746d1a016e2b18c458fd6061ba010eaa6c07bc36a2b429a58e6acd7"
+          },
+          {
+            "ms": 3979.199041999993,
+            "input": 2506,
+            "output": 31,
+            "stopReason": "stop",
+            "promptHash": "9a263de078ce0b8bb0f8017fa6003c82ee041b622aa1802a70275b7b30114b45"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_pZwdp5X4JuHvQ5Bh0E9LpzDf|fc_060b30b03b9df087016ac700fb2bdc87d0b5f073ef65ee3756",
+            "status": "accepted",
+            "headStartMs": 2092.3049589999864,
+            "generationMs": 3979,
+            "usage": {
+              "input": 2506,
+              "output": 31,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 2537,
+              "cost": {
+                "input": 0.005012,
+                "output": 0.00031,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.005322
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.5660420000058366
+          },
+          {
+            "name": "read",
+            "ms": 0.24483299998973962
+          },
+          {
+            "name": "read",
+            "ms": 0.16395799999008887
+          },
+          {
+            "name": "write",
+            "ms": 0.6537499999976717
+          },
+          {
+            "name": "run_tests",
+            "ms": 2093.4212499999994
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "grade-school",
+        "speculative": false,
+        "latencyMs": 2000,
+        "wallMs": 28220.850042000005,
+        "passed": true,
+        "testsRun": 20,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2199.852834000005,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "61d55d8cb411f6fb46d04d1829bc3a7ce785606dde7ac05c47e6c4a54e22e7e2"
+          },
+          {
+            "ms": 3474.547959000003,
+            "input": 497,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "86a7d5f4af299cbb18c264a6eea19e99d21bec3d301543565eb571f63bfc080f"
+          },
+          {
+            "ms": 6561.9619999999995,
+            "input": 579,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "aeb829f9d2dcd670ba0125942ed9636453e823a1a7b624cbd053f00b171669f0"
+          },
+          {
+            "ms": 5535.906208,
+            "input": 2249,
+            "output": 215,
+            "stopReason": "toolUse",
+            "promptHash": "93fe149e7941f0c563125d3bc618ba4d9fc31a98c0df08d197ff337afcd3d991"
+          },
+          {
+            "ms": 4299.536250000005,
+            "input": 428,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "fe69e6be42ca73fc979f21916ee986b549584a8da0bd3796fbc9a5d1bbfaf677"
+          },
+          {
+            "ms": 4055.418000000005,
+            "input": 202,
+            "output": 30,
+            "stopReason": "stop",
+            "promptHash": "445e4ff0974cb3d17059f00380797c69811e99e77b065a63f8e7b29a9ececb7e"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.4032080000033602
+          },
+          {
+            "name": "read",
+            "ms": 0.21712500001012813
+          },
+          {
+            "name": "read",
+            "ms": 0.8688750000001164
+          },
+          {
+            "name": "write",
+            "ms": 0.8467499999969732
+          },
+          {
+            "name": "run_tests",
+            "ms": 2090.0196249999863
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "phone-number",
+        "speculative": false,
+        "latencyMs": 2000,
+        "wallMs": 27700.65316700001,
+        "passed": true,
+        "testsRun": 21,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2484.711083000002,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "f81ed53f76505512cc955a2f9842971b5916b2cdef62480a748b01a6d33e946b"
+          },
+          {
+            "ms": 3010.1205829999817,
+            "input": 536,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "955e4ab4b0c8173098fb264d972f396d428f76c98e6581e01aa88014b12d74b4"
+          },
+          {
+            "ms": 2433.1882499999774,
+            "input": 581,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "70a3202f35b18beefb111921e952d3124b06a782c5736439c84ea563c399188e"
+          },
+          {
+            "ms": 11256.247290999978,
+            "input": 1864,
+            "output": 502,
+            "stopReason": "toolUse",
+            "promptHash": "81748c1e194e96120a63717ffde2c914ebacd876237a09734ba5bf06662d6769"
+          },
+          {
+            "ms": 3345.7032499999914,
+            "input": 2378,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "b1d3457e38950c4b711f190a5b030e6c0af28022b6b1b733ec85754b422219a6"
+          },
+          {
+            "ms": 3115.084375000006,
+            "input": 744,
+            "output": 25,
+            "stopReason": "stop",
+            "promptHash": "c9914a9d167a425d8020be2c6d22bf4ef2a6e5a588d9229a696f0efd619b0a39"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.237042000022484
+          },
+          {
+            "name": "read",
+            "ms": 0.39695900000515394
+          },
+          {
+            "name": "read",
+            "ms": 0.91691699999501
+          },
+          {
+            "name": "write",
+            "ms": 0.4745419999817386
+          },
+          {
+            "name": "run_tests",
+            "ms": 2052.345250000013
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "phone-number",
+        "speculative": true,
+        "latencyMs": 2000,
+        "wallMs": 26104.91204199998,
+        "passed": true,
+        "testsRun": 21,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2407.160124999995,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "b3b905a3c19ae8e10f3bc07c21ac55a1d92499290302f8a47a744929191f5716"
+          },
+          {
+            "ms": 2026.8199589999858,
+            "input": 536,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "a988604ed3a4867aeb4ebdec6a22d5b1aeb4e130dd569225bb9a368a7e180504"
+          },
+          {
+            "ms": 2732.9473330000183,
+            "input": 581,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "9afd85bcb03aa95d3519b4f1d979a0a7e71daf74a6a9471606728d04514a64d5"
+          },
+          {
+            "ms": 11791.817041000002,
+            "input": 200,
+            "output": 453,
+            "stopReason": "toolUse",
+            "promptHash": "2dc8e7df63cfe51ce31f21146f0d312ad459abf348a18425b3c5c7262fc86f2c"
+          },
+          {
+            "ms": 4663.26458399999,
+            "input": 2329,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "0d4420facc01dc4cf03ed602176b562d43af03ec2bf4fca9b466644b4499a26f"
+          },
+          {
+            "ms": 2479.3272080000024,
+            "input": 2359,
+            "output": 25,
+            "stopReason": "stop",
+            "promptHash": "53a4088c98200bdc5a39e546012eaa70ad5c80b0a6c352d5fe144c85e442046d"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_Ir3iRePjYbkACsfYebkm4zqd|fc_04d1bf5815707712016ac7014ed10087d09c520f9fa24a5f59",
+            "status": "accepted",
+            "headStartMs": 2070.020332999993,
+            "generationMs": 2479,
+            "usage": {
+              "input": 2359,
+              "output": 25,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 2384,
+              "cost": {
+                "input": 0.004718,
+                "output": 0.00025,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.004968
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.2800829999905545
+          },
+          {
+            "name": "read",
+            "ms": 0.25841700000455603
+          },
+          {
+            "name": "read",
+            "ms": 0.9599579999921843
+          },
+          {
+            "name": "write",
+            "ms": 0.592000000004191
+          },
+          {
+            "name": "run_tests",
+            "ms": 2070.141249999986
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "transpose",
+        "speculative": true,
+        "latencyMs": 2000,
+        "wallMs": 20764.227083000005,
+        "passed": true,
+        "testsRun": 12,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 3289.151082999975,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "d48682d0c3055a0e12e55fcbb912856d8cd82de36ad16881463faeaabd97187b"
+          },
+          {
+            "ms": 3937.7621660000004,
+            "input": 441,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "27fe1c73b2008eaf35fb6eb9ec207003f7c2ff72c9edcbbb45b53f7f1be7342c"
+          },
+          {
+            "ms": 3221.101874999993,
+            "input": 476,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "cc97777578b0cf938329c96aaae6638078f39fb4ab2fe2bbf5d61adbee353424"
+          },
+          {
+            "ms": 5632.709083000023,
+            "input": 1235,
+            "output": 195,
+            "stopReason": "toolUse",
+            "promptHash": "df77c4d9de2992afb319eae1a1b4279699faba4ba0a04c2f4d07c4a41c2d4601"
+          },
+          {
+            "ms": 2198.9077079999843,
+            "input": 1442,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "1b57ce42e936228b77f8cf965782b1b3ef00d365caad19b990f19be6ec6d7724"
+          },
+          {
+            "ms": 2481.8246660000004,
+            "input": 1472,
+            "output": 26,
+            "stopReason": "stop",
+            "promptHash": "a604f8ecdd520a49122fded92bc342ad9f009ff548d6da7aec66c40748e1daae"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_APgOrVXBQFF33sOLNIGi5zjS|fc_0c5f960618b2ba02016ac70163b15c87d0905c1fe10f1c0d4f",
+            "status": "accepted",
+            "headStartMs": 2116.385042000009,
+            "generationMs": 2482,
+            "usage": {
+              "input": 1472,
+              "output": 26,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 1498,
+              "cost": {
+                "input": 0.002944,
+                "output": 0.00026000000000000003,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.0032040000000000003
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.32595800000126474
+          },
+          {
+            "name": "read",
+            "ms": 0.23120800001197495
+          },
+          {
+            "name": "read",
+            "ms": 0.2076660000020638
+          },
+          {
+            "name": "write",
+            "ms": 0.41254200000548735
+          },
+          {
+            "name": "run_tests",
+            "ms": 2116.6898330000113
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "transpose",
+        "speculative": false,
+        "latencyMs": 2000,
+        "wallMs": 27074.347749999986,
+        "passed": true,
+        "testsRun": 12,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 4957.649999999994,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "65f7aab8d4022c07d1a4dc4aa9c0c15ee51b802f66610a96c7216c909bc61af1"
+          },
+          {
+            "ms": 4039.1394169999985,
+            "input": 441,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "50547ad625661be8dd1c1ad4ed9e5470866982cea3422edcbafde6e599e56e99"
+          },
+          {
+            "ms": 2623.923624999996,
+            "input": 476,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "09feee87e8aaa5cb7bcbf84dbd8c487d940c1b6b19c9044c34a298fe94808187"
+          },
+          {
+            "ms": 7920.897459,
+            "input": 1235,
+            "output": 194,
+            "stopReason": "toolUse",
+            "promptHash": "d162bde9468b9a5194ef82e90602553a4e14b6937995b428eab1863fc59be820"
+          },
+          {
+            "ms": 2104.042207999999,
+            "input": 1441,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "20ce6aea9483ac276d7ffa944023793729f576cc02d45afbf203efcf1c074a8c"
+          },
+          {
+            "ms": 3309.8035419999796,
+            "input": 319,
+            "output": 27,
+            "stopReason": "stop",
+            "promptHash": "b5a06643d3f3829aa9f3c0fe16f59486ec501a515f50425ac129ce58366bef28"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.32437499999650754
+          },
+          {
+            "name": "read",
+            "ms": 0.5484160000050906
+          },
+          {
+            "name": "read",
+            "ms": 0.9258330000157002
+          },
+          {
+            "name": "write",
+            "ms": 0.7834169999987353
+          },
+          {
+            "name": "run_tests",
+            "ms": 2114.8310000000056
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "forth",
+        "speculative": false,
+        "latencyMs": 2000,
+        "wallMs": 35630.11295800001,
+        "passed": true,
+        "testsRun": 54,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 3646.322583000001,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "2dd91b6311b01b12475c3c0280c105a04a9b5c94f575777f428184c0158e6f3b"
+          },
+          {
+            "ms": 2219.2086249999993,
+            "input": 440,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "a7829d98b58aefbeb3f8c22ac6d00c88103ac120239692a05a09b255575e1512"
+          },
+          {
+            "ms": 2087.9385410000104,
+            "input": 486,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "1ff2a4497d0404661511198a8bfa5dec8e6690bb5030233efee579be292fec19"
+          },
+          {
+            "ms": 15857.440709000017,
+            "input": 3222,
+            "output": 732,
+            "stopReason": "toolUse",
+            "promptHash": "92ecefa037259702a64ec1edcfec0ba5f8f30dd20817a7331e4c9eb5edead172"
+          },
+          {
+            "ms": 1880.5748330000206,
+            "input": 894,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "1e2096a4df55b5cc4723b14449f1502b2d052534261206ebe27e0047d1be93b0"
+          },
+          {
+            "ms": 7787.746915999975,
+            "input": 3996,
+            "output": 78,
+            "stopReason": "stop",
+            "promptHash": "bb2ba4a8aa2a84df76a1987656ee27c638a384daf6cb621d5457f63176719509"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.35300000000279397
+          },
+          {
+            "name": "read",
+            "ms": 0.2724999999918509
+          },
+          {
+            "name": "read",
+            "ms": 0.48754199998802505
+          },
+          {
+            "name": "write",
+            "ms": 0.45770899998024106
+          },
+          {
+            "name": "run_tests",
+            "ms": 2141.73654100002
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "forth",
+        "speculative": true,
+        "latencyMs": 2000,
+        "wallMs": 39742.871291999996,
+        "passed": true,
+        "testsRun": 54,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 3603.5740000000224,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "5956e5267145b20722bacb02fb64b31b8e8fd6255a502c1766dc27f6f0289e78"
+          },
+          {
+            "ms": 3477.5722500000265,
+            "input": 440,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "a7c19ae5fd0ac3497120946c63937063011d216246be0350a53b5ffc5fe73adb"
+          },
+          {
+            "ms": 2539.4264170000097,
+            "input": 486,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "7104c6390d4d0658deed7374b94f7f913774907376aa47ebb0ec8f452c94938a"
+          },
+          {
+            "ms": 22703.80812500004,
+            "input": 3222,
+            "output": 857,
+            "stopReason": "toolUse",
+            "promptHash": "20854e7878734a4dbe76ed912a64aab3455cbfdebc7f12fa9994a2497332b2f7"
+          },
+          {
+            "ms": 2090.503874999995,
+            "input": 4091,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "db7c659b90e9306d329ad17cd7ef7230c3dd96dba57511bd76d460a5c803e54b"
+          },
+          {
+            "ms": 5321.088125000009,
+            "input": 1049,
+            "output": 36,
+            "stopReason": "stop",
+            "promptHash": "0a5d7ddd1a65c5c5c375dfc42dc349f4c2d49f27754b5bb62d52fb8229a34ce6"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_kZBosfFbxYyyMclIpKblNY6k|fc_0f6297e53e0bc3b2016ac701c7e7e087d0b59cee606f3bc6de",
+            "status": "accepted",
+            "headStartMs": 2090.9222079999745,
+            "generationMs": 5321,
+            "usage": {
+              "input": 1049,
+              "output": 36,
+              "cacheRead": 3072,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 4157,
+              "cost": {
+                "input": 0.002098,
+                "output": 0.00036,
+                "cacheRead": 0.0006144000000000001,
+                "cacheWrite": 0,
+                "total": 0.0030724000000000003
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.5886670000036247
+          },
+          {
+            "name": "read",
+            "ms": 0.36529099999461323
+          },
+          {
+            "name": "read",
+            "ms": 0.4694580000359565
+          },
+          {
+            "name": "write",
+            "ms": 1.1363750000018626
+          },
+          {
+            "name": "run_tests",
+            "ms": 2091.2588749999995
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "bowling",
+        "speculative": true,
+        "latencyMs": 2000,
+        "wallMs": 26828.05591699999,
+        "passed": true,
+        "testsRun": 31,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2291.5075829999987,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "481d4cfd009f2b341c48acbe371a6b8f6dd9e4442512f2a6e3d607c73b7680cb"
+          },
+          {
+            "ms": 2176.5465419999673,
+            "input": 775,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "eb5d144adfa31c09e1dbaeb76bbb0531a87ec68706a212b2a2b25ade6d228a3e"
+          },
+          {
+            "ms": 2373.499375000014,
+            "input": 836,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "a98968e4fc1caf9824ea89993dfc1d415437c3586f2131e27fc7836ef82c2d19"
+          },
+          {
+            "ms": 15705.679082999995,
+            "input": 4028,
+            "output": 782,
+            "stopReason": "toolUse",
+            "promptHash": "7b72f3d214adf781aed7f3e08b10cdb1880c1f43219c8a360baf8c0f5b5b898a"
+          },
+          {
+            "ms": 2153.733500000031,
+            "input": 4822,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "12c1a8ecfc75d2835520bfdf15806387496ab4775180886a6f7f9f2b65499fe8"
+          },
+          {
+            "ms": 2124.272166000039,
+            "input": 1012,
+            "output": 28,
+            "stopReason": "stop",
+            "promptHash": "85a5035b362305636d036308ba5e6b28ff56fba384de0215e690a966bb819923"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_EZEpdG8DDKU3qZBE7zsCx49r|fc_057095729e6f1b6c016ac701e6329887d0a9c6a72547333aa3",
+            "status": "accepted",
+            "headStartMs": 2088.592000000004,
+            "generationMs": 2124,
+            "usage": {
+              "input": 1012,
+              "output": 28,
+              "cacheRead": 3840,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 4880,
+              "cost": {
+                "input": 0.0020239999999999998,
+                "output": 0.00028000000000000003,
+                "cacheRead": 0.000768,
+                "cacheWrite": 0,
+                "total": 0.0030719999999999996
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.4476670000003651
+          },
+          {
+            "name": "read",
+            "ms": 0.16562500002328306
+          },
+          {
+            "name": "read",
+            "ms": 0.25641700002597645
+          },
+          {
+            "name": "write",
+            "ms": 0.45454200002131984
+          },
+          {
+            "name": "run_tests",
+            "ms": 2088.847999999998
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "bowling",
+        "speculative": false,
+        "latencyMs": 2000,
+        "wallMs": 42111.704333,
+        "passed": true,
+        "testsRun": 31,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 6046.323207999987,
+            "input": 199,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "cb42ac42ceffd645d5bdbbbcaa54bd31fc1f3c0d3496712da55a576ed801bd30"
+          },
+          {
+            "ms": 2271.5153750000172,
+            "input": 775,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "39284ecffa2a586177c9b7e65496ef2524ba0f933738b3a1af312a09b8e83691"
+          },
+          {
+            "ms": 2983.6299589999835,
+            "input": 836,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "71c352e47dd1de3513a6130d57a58721d9ccdbe4706128f398049b8e17f46753"
+          },
+          {
+            "ms": 21048.21983300004,
+            "input": 188,
+            "output": 661,
+            "stopReason": "toolUse",
+            "promptHash": "98f4645fd20162a67cab4dd1d1eb0353b0945ff83d5f56b7c41e18032b1afe20"
+          },
+          {
+            "ms": 2126.1841249999707,
+            "input": 4701,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "8777b439887c130fe279faea7026fc6fff49c2019895720a39fd4ea0754aa785"
+          },
+          {
+            "ms": 5573.825750000018,
+            "input": 4731,
+            "output": 70,
+            "stopReason": "stop",
+            "promptHash": "51c03f656295da16a0b879cc57ec723329c864eecb83b8f1473bc2b0f35f92ad"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.3065000000060536
+          },
+          {
+            "name": "read",
+            "ms": 0.19049999996786937
+          },
+          {
+            "name": "read",
+            "ms": 0.6617499999701977
+          },
+          {
+            "name": "write",
+            "ms": 0.3126250000204891
+          },
+          {
+            "name": "run_tests",
+            "ms": 2059.3153750000056
+          }
+        ],
+        "repetition": 0
+      },
+      {
+        "task": "wordy",
+        "speculative": true,
+        "latencyMs": 2000,
+        "wallMs": 32762.372374999977,
+        "passed": true,
+        "testsRun": 25,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 2237.055874999962,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "8c6a709a41f612d547194509d99f18b763eec630ef904d30526687f52174acfb"
+          },
+          {
+            "ms": 2465.086416999984,
+            "input": 505,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "c1e2a085a47ffce237e07d829059d0981a9321196ad0f6d575591581a594e5dc"
+          },
+          {
+            "ms": 2969.038583000016,
+            "input": 541,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "01d8b2d8e2735d9d97383004913738ff643e3d8933c741b318b94b3b358d9782"
+          },
+          {
+            "ms": 14500.06008299999,
+            "input": 1641,
+            "output": 682,
+            "stopReason": "toolUse",
+            "promptHash": "9d4a03127bba6b8d4866521556bb02d2e388075adcd84e13143ee2a4b19ed8db"
+          },
+          {
+            "ms": 7370.87270800001,
+            "input": 799,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "38e30eeef7eb57e8b55d514b6a269161fe00a746f304edbe5d77834e33c555f7"
+          },
+          {
+            "ms": 3216.9566249999916,
+            "input": 2365,
+            "output": 29,
+            "stopReason": "stop",
+            "promptHash": "dab0f081ea69f461d90b8473f8a01b8c685dc702c643aeeb7204b4eb501754e5"
+          }
+        ],
+        "speculations": [
+          {
+            "toolCallId": "call_4HFQiKb6JVrRsw6rJh9aYnbs|fc_005857e5f2b2ff1d016ac7023018c087d0a96ce69113fca2a7",
+            "status": "accepted",
+            "headStartMs": 2071.731374999974,
+            "generationMs": 3217,
+            "usage": {
+              "input": 2365,
+              "output": 29,
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "reasoning": 0,
+              "totalTokens": 2394,
+              "cost": {
+                "input": 0.00473,
+                "output": 0.00029,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "total": 0.00502
+              }
+            }
+          }
+        ],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.2942909999983385
+          },
+          {
+            "name": "read",
+            "ms": 0.21316600003046915
+          },
+          {
+            "name": "read",
+            "ms": 0.5977500000153668
+          },
+          {
+            "name": "write",
+            "ms": 0.6043330000247806
+          },
+          {
+            "name": "run_tests",
+            "ms": 2071.9975420000264
+          }
+        ],
+        "repetition": 1
+      },
+      {
+        "task": "wordy",
+        "speculative": false,
+        "latencyMs": 2000,
+        "wallMs": 59414.743707999995,
+        "passed": true,
+        "testsRun": 25,
+        "turns": 8,
+        "requests": [
+          {
+            "ms": 7761.547375000024,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "9768beeabf018002cfbf847c363bede643828aab3976179e0dcc51b6395a91cc"
+          },
+          {
+            "ms": 2941.1717499999795,
+            "input": 505,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "70220ad021afa2387861ed6edb69fb23345d00600102bba3b9babb765020cc9c"
+          },
+          {
+            "ms": 2342.3602079999982,
+            "input": 541,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "5827c1442373f7b2a62728b6548e5b4cfe380b4b20dc44f6232d291df8d0368e"
+          },
+          {
+            "ms": 13538.469083000033,
+            "input": 105,
+            "output": 665,
+            "stopReason": "toolUse",
+            "promptHash": "a939b3c7dc5f0ebfe78e161cfaf25aa311483b6cbda3930b0ef5eeb5653d0034"
+          },
+          {
+            "ms": 5102.248375000025,
+            "input": 2318,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "cc6d199a7cd661ddc41d70b65593383a73969076754b76bc8db06bad64dd9788"
+          },
+          {
+            "ms": 11814.079749999975,
+            "input": 2511,
+            "output": 522,
+            "stopReason": "toolUse",
+            "promptHash": "a9cd437bf876970babfd7f05fdd2d493078d6ef272a536a77f9cc85f11ff959d"
+          },
+          {
+            "ms": 7248.02575000003,
+            "input": 3045,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "67cc8efe38d051989f1f7674f5bf53511bf9b8f45488a852cae955d4e507a357"
+          },
+          {
+            "ms": 4507.629000000015,
+            "input": 3075,
+            "output": 32,
+            "stopReason": "stop",
+            "promptHash": "50473d341999ad118ef88d27e0429ecdc7f651e5947ac108537855cb6a5a27b6"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.5383339999825694
+          },
+          {
+            "name": "read",
+            "ms": 0.8805410000495613
+          },
+          {
+            "name": "read",
+            "ms": 0.429333999985829
+          },
+          {
+            "name": "write",
+            "ms": 0.4455830000224523
+          },
+          {
+            "name": "run_tests",
+            "ms": 2079.3520000000135
+          },
+          {
+            "name": "write",
+            "ms": 0.29583300004014745
+          },
+          {
+            "name": "run_tests",
+            "ms": 2075.500207999954
+          }
+        ],
+        "repetition": 1
+      },
+      {
+        "task": "grade-school",
+        "speculative": false,
+        "latencyMs": 2000,
+        "wallMs": 29019.17729199998,
+        "passed": true,
+        "testsRun": 20,
+        "turns": 6,
+        "requests": [
+          {
+            "ms": 5597.695333999989,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "8bc67cb6259d76dac374e8e7d1923400cf9964fc68e9dc2dfe3a83ac2a066986"
+          },
+          {
+            "ms": 7228.970583000046,
+            "input": 497,
+            "output": 19,
+            "stopReason": "toolUse",
+            "promptHash": "0097be807e101315679f16879dc52daed28de3f1a12b47c5b8a15b4578574386"
+          },
+          {
+            "ms": 2096.9010000000126,
+            "input": 579,
+            "output": 20,
+            "stopReason": "toolUse",
+            "promptHash": "0cdb514c1add28d49ad6faa41236b7c7f4e9cf4599e52b4ea1e7b424f48ade17"
+          },
+          {
+            "ms": 6524.813207999978,
+            "input": 201,
+            "output": 213,
+            "stopReason": "toolUse",
+            "promptHash": "3228b98737dd0b7c33f255ded577222845800fc37e8a2a9689046d21d7bfdc3d"
+          },
+          {
+            "ms": 2144.907790999976,
+            "input": 2474,
+            "output": 14,
+            "stopReason": "toolUse",
+            "promptHash": "0caaf11816a5958ca942a93eaa61652d2863beef3e798801821deddf986d49be"
+          },
+          {
+            "ms": 3345.721709000005,
+            "input": 456,
+            "output": 33,
+            "stopReason": "stop",
+            "promptHash": "2742eada0629d3459f039b477343d544b649003d8fc4a2cb0ad35e3114691ddd"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.2948340000002645
+          },
+          {
+            "name": "read",
+            "ms": 1.1666250000125729
+          },
+          {
+            "name": "read",
+            "ms": 0.38016699999570847
+          },
+          {
+            "name": "write",
+            "ms": 0.4750000000349246
+          },
+          {
+            "name": "run_tests",
+            "ms": 2076.6619170000195
+          }
+        ],
+        "repetition": 1
+      },
+      {
+        "task": "grade-school",
+        "speculative": true,
+        "latencyMs": 2000,
+        "wallMs": 4242.159625000029,
+        "passed": false,
+        "testsRun": 20,
+        "turns": 2,
+        "error": "Our servers are currently overloaded. Please try again later.",
+        "requests": [
+          {
+            "ms": 2935.898583000002,
+            "input": 204,
+            "output": 18,
+            "stopReason": "toolUse",
+            "promptHash": "8f842efe2af07c146e377071601d858e5368021c55e3e1cffd55bc2bcc65de22"
+          },
+          {
+            "ms": 1305.7090420000022,
+            "input": 0,
+            "output": 0,
+            "stopReason": "error",
+            "promptHash": "289557c0c1b9ee322338aa1ad7cc88c61aed2add90ac6d35dad2304ceb82c05e"
+          }
+        ],
+        "speculations": [],
+        "tools": [
+          {
+            "name": "read",
+            "ms": 0.2525000000023283
+          }
+        ],
+        "repetition": 1
+      }
+    ]
+  }
+}
